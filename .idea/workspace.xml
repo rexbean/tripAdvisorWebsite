@@ -22,36 +22,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="ThreadSafeHotelData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/ThreadSafeHotelData.java">
+      <file leaf-file-name="WelcomeServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Servlet/WelcomeServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2349">
-              <caret line="348" column="25" selection-start-line="348" selection-start-column="25" selection-end-line="348" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#addHotel#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="method#addHotel#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="docComment;method#addReview#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="method#addReview#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="docComment;method#toString#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="method#toString#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="docComment;method#printToFile#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="method#printToFile#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="docComment;method#mergeReview#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="method#mergeReview#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="docComment;method#getUrl#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="method#getUrl#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="docComment;method#getHotel#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="method#getHotel#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="docComment;method#addAttraction#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="method#addAttraction#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="method#mergeAttractions#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="docComment;method#getAttraction#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="method#getAttraction#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="docComment;method#printAttractionsNearEachHotel#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="method#printAttractionsNearEachHotel#0;class#ThreadSafeHotelData#0" expanded="false" />
-                <element signature="docComment;method#insert2Database#0;class#ThreadSafeHotelData#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="171">
+              <caret line="42" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -59,8 +35,8 @@
       <file leaf-file-name="DBHandler.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Model/Database/DBHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="204" column="79" selection-start-line="204" selection-start-column="79" selection-end-line="204" selection-end-column="79" />
+            <state relative-caret-position="343">
+              <caret line="482" column="4" selection-start-line="482" selection-start-column="4" selection-end-line="482" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="docComment;method#createDatabase#0;class#DBHandler#0" expanded="false" />
@@ -69,104 +45,71 @@
                 <element signature="method#createTableReview#0;class#DBHandler#0" expanded="false" />
                 <element signature="docComment;method#createTableHotel#0;class#DBHandler#0" expanded="false" />
                 <element signature="method#createTableHotel#0;class#DBHandler#0" expanded="false" />
+                <element signature="e#6646#6647#0" expanded="true" />
+                <element signature="e#6696#6697#0" expanded="true" />
                 <element signature="docComment;method#addUser#0;class#DBHandler#0" expanded="false" />
                 <element signature="docComment;method#selectUser#0;class#DBHandler#0" expanded="false" />
                 <element signature="docComment;method#getSalt#0;class#DBHandler#0" expanded="false" />
                 <element signature="docComment;method#addHotel#0;class#DBHandler#0" expanded="false" />
                 <element signature="docComment;method#selectHotel#0;class#DBHandler#0" expanded="false" />
-                <marker date="1479431521000" expanded="true" signature="1559:1578" ph="SELECT * FRO... hotel" />
-                <marker date="1479431521000" expanded="true" signature="3522:3737" ph="CREATE TABLE... Reviews" />
-                <marker date="1479431521000" expanded="true" signature="3522:3915" ph="CREATE TABLE... Reviews" />
-                <marker date="1479431521000" expanded="true" signature="3522:3916" ph="CREATE TABLE... Reviews" />
-                <marker date="1479431521000" expanded="true" signature="3522:3917" ph="CREATE TABLE... Reviews" />
-                <marker date="1479431521000" expanded="true" signature="4627:4645" ph="CREATE TABLE... Hotel" />
-                <marker date="1479431521000" expanded="true" signature="4627:4646" ph="CREATE TABLE... Hotel" />
-                <marker date="1479431521000" expanded="true" signature="4627:4712" ph="CREATE TABLE... Hotel" />
-                <marker date="1479431521000" expanded="true" signature="4627:4713" ph="CREATE TABLE... Hotel" />
-                <marker date="1479431521000" expanded="true" signature="4627:4837" ph="CREATE TABLE... Hotel" />
-                <marker date="1479431521000" expanded="true" signature="4627:4891" ph="CREATE TABLE... Hotel" />
-                <marker date="1479431521000" expanded="true" signature="4627:4892" ph="CREATE TABLE... Hotel" />
-                <marker date="1479431521000" expanded="true" signature="4627:4947" ph="CREATE TABLE... Hotel" />
-                <marker date="1479431521000" expanded="true" signature="4627:4948" ph="CREATE TABLE... Hotel" />
-                <marker date="1479431521000" expanded="true" signature="4627:5001" ph="CREATE TABLE... Hotel" />
-                <marker date="1479431521000" expanded="true" signature="4627:5002" ph="CREATE TABLE... Hotel" />
-                <marker date="1479431521000" expanded="true" signature="4627:5054" ph="CREATE TABLE... Hotel" />
-                <marker date="1479431521000" expanded="true" signature="4627:5055" ph="CREATE TABLE... Hotel" />
-                <marker date="1479431521000" expanded="true" signature="4627:5112" ph="CREATE TABLE... Hotel" />
-                <marker date="1479431521000" expanded="true" signature="4627:5113" ph="CREATE TABLE... Hotel" />
-                <marker date="1479431521000" expanded="true" signature="5115:5116" ph="CREATE TABLE... Reviews" />
-                <marker date="1479431521000" expanded="true" signature="5822:6079" ph="CREATE TABLE... Users" />
-                <marker date="1479431521000" expanded="true" signature="5822:6080" ph="CREATE TABLE... Users" />
-                <marker date="1479431521000" expanded="true" signature="5822:6082" ph="CREATE TABLE... Users" />
-                <marker date="1479431521000" expanded="true" signature="7111:7200" ph="insert into Users... " />
-                <marker date="1479431521000" expanded="true" signature="8125:8168" ph="SELECT sl FR... Users" />
-                <marker date="1479431521000" expanded="true" signature="8125:8169" ph="SELECT * FRO... Usersusername" />
-                <marker date="1479431521000" expanded="true" signature="9402:9441" ph="SELECT Salt Users" />
-                <marker date="1479431521000" expanded="true" signature="10586:10644" ph="SELECT usern... Users" />
-                <marker date="1479431521000" expanded="true" signature="12017:12142" ph="INSERT INTO hotel... " />
-                <marker date="1479431521000" expanded="true" signature="12017:12173" ph="INSERT INTO hotel... " />
-                <marker date="1479431521000" expanded="true" signature="12017:12174" ph="insert into Users... " />
-                <marker date="1479431521000" expanded="true" signature="13482:13517" ph="SELECT Usern... Users" />
-                <marker date="1479431521000" expanded="true" signature="15185:15355" ph="insert into Users... " />
-                <marker date="1479431521000" expanded="true" signature="16739:16767" ph="SELECT Usern... Users" />
-                <marker date="1479431521000" expanded="true" signature="16739:16782" ph="SELECT * FRO... Reviews" />
-                <marker date="1479431521000" expanded="true" signature="16739:16783" ph="SELECT * FRO... reviews" />
+                <marker date="1479787217000" expanded="true" signature="1559:1578" ph="SELECT * FRO... hotel" />
+                <marker date="1479787217000" expanded="true" signature="3522:3737" ph="CREATE TABLE... Reviews" />
+                <marker date="1479787217000" expanded="true" signature="3522:3915" ph="CREATE TABLE... Reviews" />
+                <marker date="1479787217000" expanded="true" signature="3522:3916" ph="CREATE TABLE... Reviews" />
+                <marker date="1479787217000" expanded="true" signature="3522:3917" ph="CREATE TABLE... Reviews" />
+                <marker date="1479787217000" expanded="true" signature="4627:4645" ph="CREATE TABLE... Hotel" />
+                <marker date="1479787217000" expanded="true" signature="4627:4646" ph="CREATE TABLE... Hotel" />
+                <marker date="1479787217000" expanded="true" signature="4627:4712" ph="CREATE TABLE... Hotel" />
+                <marker date="1479787217000" expanded="true" signature="4627:4713" ph="CREATE TABLE... Hotel" />
+                <marker date="1479787217000" expanded="true" signature="4627:4837" ph="CREATE TABLE... Hotel" />
+                <marker date="1479787217000" expanded="true" signature="4627:4891" ph="CREATE TABLE... Hotel" />
+                <marker date="1479787217000" expanded="true" signature="4627:4892" ph="CREATE TABLE... Hotel" />
+                <marker date="1479787217000" expanded="true" signature="4627:4947" ph="CREATE TABLE... Hotel" />
+                <marker date="1479787217000" expanded="true" signature="4627:4948" ph="CREATE TABLE... Hotel" />
+                <marker date="1479787217000" expanded="true" signature="4627:5001" ph="CREATE TABLE... Hotel" />
+                <marker date="1479787217000" expanded="true" signature="4627:5002" ph="CREATE TABLE... Hotel" />
+                <marker date="1479787217000" expanded="true" signature="4627:5054" ph="CREATE TABLE... Hotel" />
+                <marker date="1479787217000" expanded="true" signature="4627:5055" ph="CREATE TABLE... Hotel" />
+                <marker date="1479787217000" expanded="true" signature="4627:5112" ph="CREATE TABLE... Hotel" />
+                <marker date="1479787217000" expanded="true" signature="4627:5113" ph="CREATE TABLE... Hotel" />
+                <marker date="1479787217000" expanded="true" signature="5115:5116" ph="CREATE TABLE... Reviews" />
+                <marker date="1479787217000" expanded="true" signature="5822:6079" ph="CREATE TABLE... Users" />
+                <marker date="1479787217000" expanded="true" signature="5822:6080" ph="CREATE TABLE... Users" />
+                <marker date="1479787217000" expanded="true" signature="5822:6082" ph="CREATE TABLE... Users" />
+                <marker date="1479787217000" expanded="true" signature="7111:7200" ph="insert into Users... " />
+                <marker date="1479787217000" expanded="true" signature="8126:8169" ph="SELECT sl FR... Users" />
+                <marker date="1479787217000" expanded="true" signature="8126:8170" ph="SELECT * FRO... Usersusername" />
+                <marker date="1479787217000" expanded="true" signature="9403:9442" ph="SELECT Salt Users" />
+                <marker date="1479787217000" expanded="true" signature="10587:10645" ph="SELECT usern... Users" />
+                <marker date="1479787217000" expanded="true" signature="12018:12143" ph="INSERT INTO hotel... " />
+                <marker date="1479787217000" expanded="true" signature="12018:12174" ph="INSERT INTO hotel... " />
+                <marker date="1479787217000" expanded="true" signature="12018:12175" ph="insert into Users... " />
+                <marker date="1479787217000" expanded="true" signature="13483:13518" ph="SELECT Usern... Users" />
+                <marker date="1479787217000" expanded="true" signature="15186:15356" ph="insert into Users... " />
+                <marker date="1479787217000" expanded="true" signature="16740:16768" ph="SELECT Usern... Users" />
+                <marker date="1479787217000" expanded="true" signature="16740:16783" ph="SELECT * FRO... Reviews" />
+                <marker date="1479787217000" expanded="true" signature="16740:16784" ph="SELECT * FRO... reviews" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Helper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Helper.java">
+      <file leaf-file-name="LoginServlet.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controller/Servlet/LoginServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2523">
-              <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+            <state relative-caret-position="29">
+              <caret line="22" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Global.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Global.java">
+      <file leaf-file-name="Review.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/Review.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="606">
+              <caret line="267" column="51" selection-start-line="267" selection-start-column="51" selection-end-line="267" selection-end-column="51" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBConnector.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Database/DBConnector.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1479">
-              <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1885">
-              <caret line="74" column="12" selection-start-line="74" selection-start-column="12" selection-end-line="74" selection-end-column="12" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="docComment;method#authentication#0;class#User#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -207,20 +150,20 @@
         <option value="$PROJECT_DIR$/src/Controller/Servlet/ReviewsServlet.java" />
         <option value="$PROJECT_DIR$/src/Controller/Servlet/AttractionServlet.java" />
         <option value="$PROJECT_DIR$/src/Controller/Servlet/HomePage.java" />
-        <option value="$PROJECT_DIR$/src/Model/Helper.java" />
         <option value="$PROJECT_DIR$/src/Controller/Servlet/LoginServlet.java" />
         <option value="$PROJECT_DIR$/src/Controller/Servlet/RegisterServlet.java" />
-        <option value="$PROJECT_DIR$/src/Controller/Servlet/BaseServlet.java" />
         <option value="$PROJECT_DIR$/src/Controller/Servlet/WelcomeServlet.java" />
         <option value="$PROJECT_DIR$/src/Controller/Servlet/LogoutServlet.java" />
         <option value="$PROJECT_DIR$/src/Controller/Servlet/HomePageServlet.java" />
         <option value="$PROJECT_DIR$/src/Model/Database/DBConnector.java" />
-        <option value="$PROJECT_DIR$/src/Model/HotelData.java" />
         <option value="$PROJECT_DIR$/src/Model/Global.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Model/ThreadSafeHotelData.java" />
         <option value="$PROJECT_DIR$/src/Model/User.java" />
         <option value="$PROJECT_DIR$/src/Model/Database/DBHandler.java" />
+        <option value="$PROJECT_DIR$/src/Model/Helper.java" />
+        <option value="$PROJECT_DIR$/src/Model/HotelData.java" />
+        <option value="$PROJECT_DIR$/src/Controller/Servlet/BaseServlet.java" />
       </list>
     </option>
   </component>
@@ -266,9 +209,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -358,6 +300,28 @@
               <option name="myItemId" value="Controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Servlet" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FinalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="FinalProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -375,6 +339,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1018,29 +983,31 @@
       <workItem from="1479192660673" duration="5398000" />
       <workItem from="1479259840319" duration="19745000" />
       <workItem from="1479540506225" duration="13000" />
+      <workItem from="1479773880165" duration="5927000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69270000" />
+    <option name="totallyTimeSpent" value="75197000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887974" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Regex Tester" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.42034945" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4199134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17763157" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26480263" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Tail" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24259868" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1052,7 +1019,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887974" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3299075" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1102,7 +1068,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Model/Database/DBHandler.java</url>
-          <line>310</line>
+          <line>311</line>
           <properties />
           <option name="timeStamp" value="39" />
         </line-breakpoint>
@@ -1111,18 +1077,6 @@
           <line>76</line>
           <properties />
           <option name="timeStamp" value="59" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Model/ThreadSafeHotelData.java</url>
-          <line>351</line>
-          <properties />
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Model/ThreadSafeHotelData.java</url>
-          <line>360</line>
-          <properties />
-          <option name="timeStamp" value="62" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="63" />
@@ -1203,48 +1157,50 @@
             <element signature="method#createTableReview#0;class#DBHandler#0" expanded="false" />
             <element signature="docComment;method#createTableHotel#0;class#DBHandler#0" expanded="false" />
             <element signature="method#createTableHotel#0;class#DBHandler#0" expanded="false" />
+            <element signature="e#6646#6647#0" expanded="true" />
+            <element signature="e#6696#6697#0" expanded="true" />
             <element signature="docComment;method#addUser#0;class#DBHandler#0" expanded="false" />
             <element signature="docComment;method#selectUser#0;class#DBHandler#0" expanded="false" />
             <element signature="docComment;method#getSalt#0;class#DBHandler#0" expanded="false" />
             <element signature="docComment;method#addHotel#0;class#DBHandler#0" expanded="false" />
             <element signature="docComment;method#selectHotel#0;class#DBHandler#0" expanded="false" />
-            <marker date="1479431521000" expanded="true" signature="1559:1578" ph="SELECT * FRO... hotel" />
-            <marker date="1479431521000" expanded="true" signature="3522:3737" ph="CREATE TABLE... Reviews" />
-            <marker date="1479431521000" expanded="true" signature="3522:3915" ph="CREATE TABLE... Reviews" />
-            <marker date="1479431521000" expanded="true" signature="3522:3916" ph="CREATE TABLE... Reviews" />
-            <marker date="1479431521000" expanded="true" signature="3522:3917" ph="CREATE TABLE... Reviews" />
-            <marker date="1479431521000" expanded="true" signature="4627:4645" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:4646" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:4712" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:4713" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:4837" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:4891" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:4892" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:4947" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:4948" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:5001" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:5002" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:5054" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:5055" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:5112" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:5113" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="5115:5116" ph="CREATE TABLE... Reviews" />
-            <marker date="1479431521000" expanded="true" signature="5822:6079" ph="CREATE TABLE... Users" />
-            <marker date="1479431521000" expanded="true" signature="5822:6080" ph="CREATE TABLE... Users" />
-            <marker date="1479431521000" expanded="true" signature="5822:6082" ph="CREATE TABLE... Users" />
-            <marker date="1479431521000" expanded="true" signature="7111:7200" ph="insert into Users... " />
-            <marker date="1479431521000" expanded="true" signature="8125:8168" ph="SELECT sl FR... Users" />
-            <marker date="1479431521000" expanded="true" signature="8125:8169" ph="SELECT * FRO... Usersusername" />
-            <marker date="1479431521000" expanded="true" signature="9402:9441" ph="SELECT Salt Users" />
-            <marker date="1479431521000" expanded="true" signature="10586:10644" ph="SELECT usern... Users" />
-            <marker date="1479431521000" expanded="true" signature="12017:12142" ph="INSERT INTO hotel... " />
-            <marker date="1479431521000" expanded="true" signature="12017:12173" ph="INSERT INTO hotel... " />
-            <marker date="1479431521000" expanded="true" signature="12017:12174" ph="insert into Users... " />
-            <marker date="1479431521000" expanded="true" signature="13482:13517" ph="SELECT Usern... Users" />
-            <marker date="1479431521000" expanded="true" signature="15185:15355" ph="insert into Users... " />
-            <marker date="1479431521000" expanded="true" signature="16739:16767" ph="SELECT Usern... Users" />
-            <marker date="1479431521000" expanded="true" signature="16739:16782" ph="SELECT * FRO... Reviews" />
-            <marker date="1479431521000" expanded="true" signature="16739:16783" ph="SELECT * FRO... reviews" />
+            <marker date="1479787217000" expanded="true" signature="1559:1578" ph="SELECT * FRO... hotel" />
+            <marker date="1479787217000" expanded="true" signature="3522:3737" ph="CREATE TABLE... Reviews" />
+            <marker date="1479787217000" expanded="true" signature="3522:3915" ph="CREATE TABLE... Reviews" />
+            <marker date="1479787217000" expanded="true" signature="3522:3916" ph="CREATE TABLE... Reviews" />
+            <marker date="1479787217000" expanded="true" signature="3522:3917" ph="CREATE TABLE... Reviews" />
+            <marker date="1479787217000" expanded="true" signature="4627:4645" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:4646" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:4712" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:4713" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:4837" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:4891" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:4892" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:4947" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:4948" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:5001" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:5002" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:5054" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:5055" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:5112" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:5113" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="5115:5116" ph="CREATE TABLE... Reviews" />
+            <marker date="1479787217000" expanded="true" signature="5822:6079" ph="CREATE TABLE... Users" />
+            <marker date="1479787217000" expanded="true" signature="5822:6080" ph="CREATE TABLE... Users" />
+            <marker date="1479787217000" expanded="true" signature="5822:6082" ph="CREATE TABLE... Users" />
+            <marker date="1479787217000" expanded="true" signature="7111:7200" ph="insert into Users... " />
+            <marker date="1479787217000" expanded="true" signature="8126:8169" ph="SELECT sl FR... Users" />
+            <marker date="1479787217000" expanded="true" signature="8126:8170" ph="SELECT * FRO... Usersusername" />
+            <marker date="1479787217000" expanded="true" signature="9403:9442" ph="SELECT Salt Users" />
+            <marker date="1479787217000" expanded="true" signature="10587:10645" ph="SELECT usern... Users" />
+            <marker date="1479787217000" expanded="true" signature="12018:12143" ph="INSERT INTO hotel... " />
+            <marker date="1479787217000" expanded="true" signature="12018:12174" ph="INSERT INTO hotel... " />
+            <marker date="1479787217000" expanded="true" signature="12018:12175" ph="insert into Users... " />
+            <marker date="1479787217000" expanded="true" signature="13483:13518" ph="SELECT Usern... Users" />
+            <marker date="1479787217000" expanded="true" signature="15186:15356" ph="insert into Users... " />
+            <marker date="1479787217000" expanded="true" signature="16740:16768" ph="SELECT Usern... Users" />
+            <marker date="1479787217000" expanded="true" signature="16740:16783" ph="SELECT * FRO... Reviews" />
+            <marker date="1479787217000" expanded="true" signature="16740:16784" ph="SELECT * FRO... reviews" />
           </folding>
         </state>
       </provider>
@@ -1305,17 +1261,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Hotel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="docComment;method#toJSONString#0;class#Hotel#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/jetty-all-9.3.9.v20160517-uber.jar!/org/eclipse/jetty/servlet/ServletHandler.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -1358,27 +1303,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Review.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="267" column="51" selection-start-line="267" selection-start-column="51" selection-end-line="267" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/HotelData.java" />
     <entry file="file://$PROJECT_DIR$/src/HotelData.java" />
     <entry file="file://$PROJECT_DIR$/src/Controller/Servlet/HotelInfoServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="203">
           <caret line="16" column="49" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/debug.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1397,20 +1327,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Servlet/BaseServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="938">
-          <caret line="187" column="60" selection-start-line="187" selection-start-column="60" selection-end-line="187" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Servlet/WelcomeServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="59" column="26" selection-start-line="59" selection-start-column="26" selection-end-line="59" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/Servlet/ReviewsServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-232">
@@ -1425,32 +1341,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Servlet/LoginServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2110">
-          <caret line="87" column="17" selection-start-line="87" selection-start-column="17" selection-end-line="87" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/input/db.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="29">
           <caret line="1" column="15" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/Servlet/RegisterServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2204">
-          <caret line="76" column="68" selection-start-line="76" selection-start-column="68" selection-end-line="76" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/HotelData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="134" column="10" selection-start-line="134" selection-start-column="10" selection-end-line="134" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1461,28 +1355,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Database/DBConnector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1479">
           <caret line="61" column="32" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Helper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2523">
-          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1506,10 +1382,70 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Hotel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+          <folding>
+            <element signature="docComment;method#toJSONString#0;class#Hotel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Helper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2523">
+          <caret line="91" column="5" selection-start-line="91" selection-start-column="5" selection-end-line="91" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/HotelData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Servlet/RegisterServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="76" column="68" selection-start-line="76" selection-start-column="68" selection-end-line="76" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Servlet/BaseServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2204">
+          <caret line="90" column="46" selection-start-line="90" selection-start-column="34" selection-end-line="90" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/ThreadSafeHotelData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2349">
-          <caret line="348" column="25" selection-start-line="348" selection-start-column="25" selection-end-line="348" selection-end-column="25" />
+        <state relative-caret-position="182">
+          <caret line="356" column="35" selection-start-line="356" selection-start-column="35" selection-end-line="356" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#addHotel#0;class#ThreadSafeHotelData#0" expanded="false" />
@@ -1538,10 +1474,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Servlet/WelcomeServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="42" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/Servlet/LoginServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="22" column="44" selection-start-line="0" selection-start-column="0" selection-end-line="104" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Review.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="606">
+          <caret line="267" column="51" selection-start-line="267" selection-start-column="51" selection-end-line="267" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Database/DBHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="204" column="79" selection-start-line="204" selection-start-column="79" selection-end-line="204" selection-end-column="79" />
+        <state relative-caret-position="343">
+          <caret line="482" column="4" selection-start-line="482" selection-start-column="4" selection-end-line="482" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="docComment;method#createDatabase#0;class#DBHandler#0" expanded="false" />
@@ -1550,48 +1510,50 @@
             <element signature="method#createTableReview#0;class#DBHandler#0" expanded="false" />
             <element signature="docComment;method#createTableHotel#0;class#DBHandler#0" expanded="false" />
             <element signature="method#createTableHotel#0;class#DBHandler#0" expanded="false" />
+            <element signature="e#6646#6647#0" expanded="true" />
+            <element signature="e#6696#6697#0" expanded="true" />
             <element signature="docComment;method#addUser#0;class#DBHandler#0" expanded="false" />
             <element signature="docComment;method#selectUser#0;class#DBHandler#0" expanded="false" />
             <element signature="docComment;method#getSalt#0;class#DBHandler#0" expanded="false" />
             <element signature="docComment;method#addHotel#0;class#DBHandler#0" expanded="false" />
             <element signature="docComment;method#selectHotel#0;class#DBHandler#0" expanded="false" />
-            <marker date="1479431521000" expanded="true" signature="1559:1578" ph="SELECT * FRO... hotel" />
-            <marker date="1479431521000" expanded="true" signature="3522:3737" ph="CREATE TABLE... Reviews" />
-            <marker date="1479431521000" expanded="true" signature="3522:3915" ph="CREATE TABLE... Reviews" />
-            <marker date="1479431521000" expanded="true" signature="3522:3916" ph="CREATE TABLE... Reviews" />
-            <marker date="1479431521000" expanded="true" signature="3522:3917" ph="CREATE TABLE... Reviews" />
-            <marker date="1479431521000" expanded="true" signature="4627:4645" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:4646" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:4712" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:4713" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:4837" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:4891" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:4892" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:4947" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:4948" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:5001" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:5002" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:5054" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:5055" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:5112" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="4627:5113" ph="CREATE TABLE... Hotel" />
-            <marker date="1479431521000" expanded="true" signature="5115:5116" ph="CREATE TABLE... Reviews" />
-            <marker date="1479431521000" expanded="true" signature="5822:6079" ph="CREATE TABLE... Users" />
-            <marker date="1479431521000" expanded="true" signature="5822:6080" ph="CREATE TABLE... Users" />
-            <marker date="1479431521000" expanded="true" signature="5822:6082" ph="CREATE TABLE... Users" />
-            <marker date="1479431521000" expanded="true" signature="7111:7200" ph="insert into Users... " />
-            <marker date="1479431521000" expanded="true" signature="8125:8168" ph="SELECT sl FR... Users" />
-            <marker date="1479431521000" expanded="true" signature="8125:8169" ph="SELECT * FRO... Usersusername" />
-            <marker date="1479431521000" expanded="true" signature="9402:9441" ph="SELECT Salt Users" />
-            <marker date="1479431521000" expanded="true" signature="10586:10644" ph="SELECT usern... Users" />
-            <marker date="1479431521000" expanded="true" signature="12017:12142" ph="INSERT INTO hotel... " />
-            <marker date="1479431521000" expanded="true" signature="12017:12173" ph="INSERT INTO hotel... " />
-            <marker date="1479431521000" expanded="true" signature="12017:12174" ph="insert into Users... " />
-            <marker date="1479431521000" expanded="true" signature="13482:13517" ph="SELECT Usern... Users" />
-            <marker date="1479431521000" expanded="true" signature="15185:15355" ph="insert into Users... " />
-            <marker date="1479431521000" expanded="true" signature="16739:16767" ph="SELECT Usern... Users" />
-            <marker date="1479431521000" expanded="true" signature="16739:16782" ph="SELECT * FRO... Reviews" />
-            <marker date="1479431521000" expanded="true" signature="16739:16783" ph="SELECT * FRO... reviews" />
+            <marker date="1479787217000" expanded="true" signature="1559:1578" ph="SELECT * FRO... hotel" />
+            <marker date="1479787217000" expanded="true" signature="3522:3737" ph="CREATE TABLE... Reviews" />
+            <marker date="1479787217000" expanded="true" signature="3522:3915" ph="CREATE TABLE... Reviews" />
+            <marker date="1479787217000" expanded="true" signature="3522:3916" ph="CREATE TABLE... Reviews" />
+            <marker date="1479787217000" expanded="true" signature="3522:3917" ph="CREATE TABLE... Reviews" />
+            <marker date="1479787217000" expanded="true" signature="4627:4645" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:4646" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:4712" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:4713" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:4837" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:4891" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:4892" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:4947" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:4948" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:5001" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:5002" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:5054" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:5055" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:5112" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="4627:5113" ph="CREATE TABLE... Hotel" />
+            <marker date="1479787217000" expanded="true" signature="5115:5116" ph="CREATE TABLE... Reviews" />
+            <marker date="1479787217000" expanded="true" signature="5822:6079" ph="CREATE TABLE... Users" />
+            <marker date="1479787217000" expanded="true" signature="5822:6080" ph="CREATE TABLE... Users" />
+            <marker date="1479787217000" expanded="true" signature="5822:6082" ph="CREATE TABLE... Users" />
+            <marker date="1479787217000" expanded="true" signature="7111:7200" ph="insert into Users... " />
+            <marker date="1479787217000" expanded="true" signature="8126:8169" ph="SELECT sl FR... Users" />
+            <marker date="1479787217000" expanded="true" signature="8126:8170" ph="SELECT * FRO... Usersusername" />
+            <marker date="1479787217000" expanded="true" signature="9403:9442" ph="SELECT Salt Users" />
+            <marker date="1479787217000" expanded="true" signature="10587:10645" ph="SELECT usern... Users" />
+            <marker date="1479787217000" expanded="true" signature="12018:12143" ph="INSERT INTO hotel... " />
+            <marker date="1479787217000" expanded="true" signature="12018:12174" ph="INSERT INTO hotel... " />
+            <marker date="1479787217000" expanded="true" signature="12018:12175" ph="insert into Users... " />
+            <marker date="1479787217000" expanded="true" signature="13483:13518" ph="SELECT Usern... Users" />
+            <marker date="1479787217000" expanded="true" signature="15186:15356" ph="insert into Users... " />
+            <marker date="1479787217000" expanded="true" signature="16740:16768" ph="SELECT Usern... Users" />
+            <marker date="1479787217000" expanded="true" signature="16740:16783" ph="SELECT * FRO... Reviews" />
+            <marker date="1479787217000" expanded="true" signature="16740:16784" ph="SELECT * FRO... reviews" />
           </folding>
         </state>
       </provider>

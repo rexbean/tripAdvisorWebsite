@@ -254,6 +254,7 @@ public class DBHandler
                 Global.status=Status.SQL_EXCEPTION;
                 e.printStackTrace();
                 Global.logger.fatal(Global.status.toString()+"in add a new user");
+
                 return Global.status;
             }
         }

@@ -132,7 +132,6 @@ public class HotelData
 		username=Helper.String2UTF8(username);
 
 		Review r=new Review(hotelId,reviewId,rating,reviewTitle,review,isRecom,reviewDate,username);
-		//Global.db.addReview(r);
 		//if do not have the hotel, do not add the review in the reviewSet
 		if(!hotelMap.containsKey(hotelId))
 		{

@@ -32,6 +32,11 @@ public class BaseServlet extends HttpServlet
             writer.println("<html>");
             writer.println("<head>");
             writer.println("\t<title>" + title + "</title>");
+            writer.println("<meta charset=\"utf-8\">");
+            writer.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
+            writer.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">");
+            writer.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n");
+            writer.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n");
             writer.println("</head>");
             writer.println("<body>");
         }
@@ -48,9 +53,12 @@ public class BaseServlet extends HttpServlet
             PrintWriter writer = response.getWriter();
 
             writer.println();
+            writer.println("<div>");
             writer.println("<p style=\"font-size: 10pt; font-style: italic;\">");
             writer.println("Last updated at " + getDate());
             writer.println("</p>");
+
+            writer.println("</div>");
 
             writer.println("</body>");
             writer.println("</html>");
@@ -173,20 +181,20 @@ public class BaseServlet extends HttpServlet
     protected void displayLoginForm(PrintWriter out)
     {
         assert out != null;
-
+        out.println("<div class=\"container\">");
+        out.println("<h2>Login</h2>");
         out.println("<form action=\"/login\" method=\"post\">"); // the form will be processed by POST
-        out.println("<table border=\"0\">");
-        out.println("\t<tr>");
-        out.println("\t\t<td>Usename:</td>");
-        out.println("\t\t<td><input type=\"text\" name=\"username\" size=\"30\"></td>");
-        out.println("\t</tr>");
-        out.println("\t<tr>");
-        out.println("\t\t<td>Password:</td>");
-        out.println("\t\t<td><input type=\"password\" name=\"password\" size=\"30\"></td>");
-        out.println("</tr>");
-        out.println("</table>");
+        out.println("<div class=\"form-group\">");
+        out.println("<label for=\"username\">Username:</label>");
+        out.println("<input type=\"text\" name=\"username\" size=\"30\">");
+        out.println("</div>");
+        out.println("<div class=\"form-group\">");
+        out.println("<label for=\"pwd\">Password:</label>");
+        out.println("<input type=\"password\" name=\"password\" size=\"30\">");
+        out.println("</div>");
         out.println("<p><input type=\"submit\" value=\"Login\"></p>");
         out.println("</form>");
+        out.println("</div>");
     }
 
     protected void displayLogoutForm(PrintWriter out)
