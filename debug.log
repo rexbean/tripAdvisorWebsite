@@ -1,2 +1,3 @@
-[21:25:51:085 info ] @32 main: connect database Doing it successfully!
-[21:25:54:716 info ] @63 qtp385337537-18: not the same session,go to login
+[23:29:47:999 info ] @32 main: connect database Doing it successfully!
+[23:29:54:451 info ] @33 qtp233996206-17: cookie is null, go to the register.
+[23:29:54:968 info ] @33 qtp233996206-19: cookie is null, go to the register.

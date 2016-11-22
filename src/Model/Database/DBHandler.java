@@ -463,6 +463,47 @@ public class DBHandler
 
     }
 
+    public ArrayList<Hotel> selectAllHotels()
+    {
+        ArrayList<Hotel> hotels=new ArrayList<>();
+        try(Connection connection=db.getConnection();)
+        {
+            String SQL="SELECT * FROM hotel";
+            PreparedStatement statement = connection.prepareStatement(SQL);
+            ResultSet results = statement.executeQuery();
+            while(results.next())
+            {
+                String hotelId=results.getString(1);
+                String hotelName=results.getString(2);
+                String streetAddress=results.getString(3);
+                String city=results.getString(4);
+                String state=results.getString(5);
+                double longitude=results.getDouble(6);
+                double latitude=results.getDouble(7);
+                HotelAddress address=new HotelAddress(streetAddress,city,state,latitude,longitude);
+                Hotel hotel=new Hotel(hotelId,hotelName,address);
+                hotels.add(hotel);
+            }
+            if(hotels==null)
+            {
+                Global.status=Status.SQL_EXCEPTION;
+                Global.logger.fatal("select all hotels "+Global.status.toString());
+            }
+            else
+            {
+                Global.status=Status.SUCCESS;
+                Global.logger.info("select all hotels "+Global.status.toString());
+            }
+            return hotels;
+        }
+        catch(SQLException e)
+        {
+            e.printStackTrace();
+            Global.status=Status.SQL_EXCEPTION;
+            Global.logger.fatal("select all hotels "+Global.status.toString());
+            return hotels;
+        }
+    }
 
     public Status addReview(Review r)
     {

@@ -1,6 +1,7 @@
 package Controller.Servlet;
 
 import Model.Global;
+import Model.Hotel;
 import Model.Status;
 import org.apache.commons.lang3.StringEscapeUtils;
 
@@ -12,9 +13,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by zihaoli on 11/15/16.
@@ -152,6 +151,7 @@ public class BaseServlet extends HttpServlet
 
         return status.toString();
     }
+
     /**
      * Writes and HTML form that shows two textfields and a button to the PrintWriter
      */
@@ -159,23 +159,24 @@ public class BaseServlet extends HttpServlet
     {
         assert out != null;
 
-        out.println("<form action=\"/register\" method=\"post\">"); // the form will be processed by POST
-        out.println("<table border=\"0\">");
-        out.println("\t<tr>");
-        out.println("\t\t<td>Usename:</td>");
-        out.println("\t\t<td><input type=\"text\" name=\"username\" size=\"30\"></td>");
-        out.println("\t</tr>");
-        out.println("\t<tr>");
-        out.println("\t\t<td>Password:</td>");
-        out.println("\t\t<td><input type=\"password\" name=\"password\" size=\"30\"></td>");
-        out.println("\t</tr>");
-        out.println("\t<tr>");
-        out.println("\t\t<td>Password:</td>");
-        out.println("\t\t<td><input type=\"password\" name=\"re_password\" size=\"30\"></td>");
-        out.println("</tr>");
-        out.println("</table>");
+        out.println("<div class=\"container\">");
+        out.println("<h2>Register</h2>");
+        out.println("<form action=\"/login\" method=\"post\">"); // the form will be processed by POST
+        out.println("<div class=\"form-group\">");
+        out.println("<label for=\"username\">Username:</label>");
+        out.println("<input type=\"text\" class=\"form-control\" id=\"username\" size=\"30\" placeholder=\"Enter username\">");
+        out.println("</div>");
+        out.println("<div class=\"form-group\">");
+        out.println("<label for=\"pwd\">Password:</label>");
+        out.println("<input type=\"password\" class=\"form-control\" id=\"password\" size=\"30\" placeholder=\"Enter password\">");
+        out.println("</div>");
+        out.println("<div class=\"form-group\">");
+        out.println("<label for=\"repwd\">Re-Password:</label>");
+        out.println("<input type=\"password\" class=\"form-control\" id=\"rePassword\" size=\"30\">");
+        out.println("</div>");
         out.println("<p><input type=\"submit\" value=\"Register\"></p>");
         out.println("</form>");
+        out.println("</div>");
     }
 
     protected void displayLoginForm(PrintWriter out)
@@ -186,11 +187,11 @@ public class BaseServlet extends HttpServlet
         out.println("<form action=\"/login\" method=\"post\">"); // the form will be processed by POST
         out.println("<div class=\"form-group\">");
         out.println("<label for=\"username\">Username:</label>");
-        out.println("<input type=\"text\" name=\"username\" size=\"30\">");
+        out.println("<input type=\"text\" class=\"form-control\" id=\"username\" size=\"30\">");
         out.println("</div>");
         out.println("<div class=\"form-group\">");
         out.println("<label for=\"pwd\">Password:</label>");
-        out.println("<input type=\"password\" name=\"password\" size=\"30\">");
+        out.println("<input type=\"password\" class=\"form-control\" id=\"password\" size=\"30\">");
         out.println("</div>");
         out.println("<p><input type=\"submit\" value=\"Login\"></p>");
         out.println("</form>");
@@ -206,6 +207,55 @@ public class BaseServlet extends HttpServlet
         out.println("</form>");
     }
 
+    protected void displayHotel(PrintWriter out)
+    {
+        assert out != null;
+        out.println("<div class=\"container\">");
+        out.println("<h2>Hotels</h2>");
+        out.println("<table class=\"table\">");
+        out.println("<thead>");
+        out.println("<tr>");
+        out.println("<th>HotelId</th>");
+        out.println("<th>HotelName</th>");
+        out.println("<th>streetAddress</th>");
+        out.println("<th>city</th>");
+        out.println("<th>state</th>");
+        out.println("<th>country</th>");
+        out.println("<th>Reviews</th>");
+        out.println("</tr>");
+        out.println("</thead>");
+        out.println("<tbody>");
+        ArrayList<Hotel> hotels=new ArrayList<>();
+        hotels=Global.db.selectAllHotels();
+        for(Hotel h:hotels)
+        {
+            out.println("<tr>");
+            out.println("<td>"+h.getHotelId()+"</td>");
+            out.println("<td>"+h.getHotelName()+"</td>");
+            out.println("<td></td>")
+        }
 
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+    }
 
 }

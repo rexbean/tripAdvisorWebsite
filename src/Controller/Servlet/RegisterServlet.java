@@ -42,7 +42,7 @@ public class RegisterServlet extends BaseServlet
             PrintWriter out=response.getWriter();
             String username=request.getParameter("username");
             String password=request.getParameter("password");
-            String re_password=request.getParameter("re_password");
+            String re_password=request.getParameter("rePassword");
 
             if(username.equals("")||password.equals("")||re_password.equals(""))
             {
