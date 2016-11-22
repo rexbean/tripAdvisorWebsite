@@ -139,7 +139,7 @@ public class DBHandler
         {
             String SQL="CREATE TABLE Reviews (hotelId VARCHAR(255) NOT NULL," +
                     "reviewId VARCHAR(255) PRIMARY KEY NOT NULL," +
-                    "rating int NOT NULL," +
+                    "rating Double NOT NULL," +
                     "reviewTitle VARCHAR(255),"+
                     "review VARCHAR(5000)," +
                     "isRecom VARCHAR(10)," +
@@ -463,12 +463,18 @@ public class DBHandler
 
     }
 
+    /**
+     * select all hotels with average rating with them
+     * @return hotel List
+     */
     public ArrayList<Hotel> selectAllHotels()
     {
         ArrayList<Hotel> hotels=new ArrayList<>();
         try(Connection connection=db.getConnection();)
         {
-            String SQL="SELECT * FROM hotel";
+            String SQL="SELECT Hotel.*,averageRating.rating FROM Hotel LEFT JOIN" +
+                    "(SELECT hotelId, AVG(rating) AS rating FROM Reviews GROUP BY " +
+                    "hotelId) AS averageRating ON Hotel.hotelId = averageRating.hotelId";
             PreparedStatement statement = connection.prepareStatement(SQL);
             ResultSet results = statement.executeQuery();
             while(results.next())
@@ -480,8 +486,10 @@ public class DBHandler
                 String state=results.getString(5);
                 double longitude=results.getDouble(6);
                 double latitude=results.getDouble(7);
+                double averRating=results.getDouble(9);
                 HotelAddress address=new HotelAddress(streetAddress,city,state,latitude,longitude);
                 Hotel hotel=new Hotel(hotelId,hotelName,address);
+                hotel.setAverRating(averRating);
                 hotels.add(hotel);
             }
             if(hotels==null)
@@ -505,9 +513,14 @@ public class DBHandler
         }
     }
 
+    /**
+     * add new review to the database
+     * @param r new review
+     * @return the result of adding
+     */
     public Status addReview(Review r)
     {
-        TreeSet<Review> review=selectReview(r.getReviewId(),1);
+        TreeSet<Review> review=selectReview(r.getReviewId());
         if(review.size()==0)
         {
             try (Connection connection = db.getConnection();)
@@ -543,15 +556,14 @@ public class DBHandler
     /**
      * get a user from the database
      * @param hotelId hotelId
-     * @param num number of the review
      * @return User
      */
-    public TreeSet<Review> selectReview(String hotelId,int num)
+    public TreeSet<Review> selectReview(String hotelId)
     {
         TreeSet<Review> set=new TreeSet<>();
         try(Connection connection=db.getConnection();)
         {
-            String SQL="SELECT * FROM Reviews WHERE hotelId=? LIMIT "+num;
+            String SQL="SELECT * FROM Reviews WHERE hotelId=?";
             PreparedStatement statement = connection.prepareStatement(SQL);
             statement.setString(1,hotelId);
             //statement.setInt(2,num);
@@ -560,15 +572,15 @@ public class DBHandler
             {
                 try
                 {
-                    String reviewId=results.getString(3);
-                    int rating=results.getInt(4);
-                    String reviewTitle=results.getString(5);
-                    String review=results.getString(6);
-                    Boolean isRecom=Boolean.valueOf(results.getString(7));
-                    String date=results.getString(8);
+                    String reviewId=results.getString(2);
+                    int rating=results.getInt(3);
+                    String reviewTitle=results.getString(4);
+                    String review=results.getString(5);
+                    Boolean isRecom=Boolean.valueOf(results.getString(6));
+                    String date=results.getString(7);
                     DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
                     java.util.Date d_date = formatter.parse(date);
-                    String username=results.getString(9);
+                    String username=results.getString(8);
                     Review r=new Review(hotelId,reviewId,rating,reviewTitle,review,isRecom,d_date,username);
                     set.add(r);
                 }

@@ -1,3 +1,49 @@
-[23:29:47:999 info ] @32 main: connect database Doing it successfully!
-[23:29:54:451 info ] @33 qtp233996206-17: cookie is null, go to the register.
-[23:29:54:968 info ] @33 qtp233996206-19: cookie is null, go to the register.
+[07:26:22:234 info ] @32 main: connect database Doing it successfully!
+[07:26:41:851 info ] @33 qtp385337537-15: cookie is null, go to the register.
+[07:26:42:439 info ] @33 qtp385337537-17: cookie is null, go to the register.
+[07:26:56:813 fatal] @291 qtp385337537-19: select user An SQL Excepiton has happened
+[07:26:56:819 info ] @72 qtp385337537-19: Doing it successfully! in registering a new user 
+[07:26:56:837 info ] @503 qtp385337537-12: select all hotels Doing it successfully!
+[07:26:56:880 info ] @42 qtp385337537-12: Doing it successfully!login to homepage
+[07:26:57:186 info ] @71 qtp385337537-15: The same session,go to Homepage
+[07:26:57:203 info ] @503 qtp385337537-16: select all hotels Doing it successfully!
+[07:26:57:216 info ] @42 qtp385337537-16: Doing it successfully!login to homepage
+[07:27:07:376 info ] @71 qtp385337537-18: The same session,go to Homepage
+[07:27:07:391 info ] @503 qtp385337537-19: select all hotels Doing it successfully!
+[07:27:07:403 info ] @42 qtp385337537-19: Doing it successfully!login to homepage
+[07:27:17:816 info ] @71 qtp385337537-12: The same session,go to Homepage
+[07:27:17:829 info ] @503 qtp385337537-15: select all hotels Doing it successfully!
+[07:27:17:848 info ] @42 qtp385337537-15: Doing it successfully!login to homepage
+[07:27:20:113 info ] @71 qtp385337537-17: The same session,go to Homepage
+[07:27:20:123 info ] @503 qtp385337537-18: select all hotels Doing it successfully!
+[07:27:20:128 info ] @42 qtp385337537-18: Doing it successfully!login to homepage
+[07:27:51:929 info ] @57 qtp385337537-15: add a new review Doing it successfully!
+[07:27:52:449 info ] @71 qtp385337537-16: The same session,go to Homepage
+[07:27:52:460 info ] @503 qtp385337537-18: select all hotels Doing it successfully!
+[07:27:52:463 info ] @42 qtp385337537-18: Doing it successfully!login to homepage
+[07:28:34:713 info ] @63 qtp385337537-16: not the same session,go to login
+[07:28:39:137 info ] @63 qtp385337537-17: not the same session,go to login
+[07:29:00:789 info ] @325 qtp385337537-16: get salt Doing it successfully!
+[07:29:00:793 info ] @359 qtp385337537-16: authentic Doing it successfully!
+[07:29:00:793 info ] @117 qtp385337537-16: authentic Doing it successfully!
+[07:29:00:793 info ] @96 qtp385337537-16: login Doing it successfully!
+[07:29:00:796 info ] @325 qtp385337537-16: get salt Doing it successfully!
+[07:29:00:805 info ] @503 qtp385337537-18: select all hotels Doing it successfully!
+[07:29:00:808 info ] @42 qtp385337537-18: Doing it successfully!login to homepage
+[07:29:01:290 info ] @71 qtp385337537-19: The same session,go to Homepage
+[07:29:01:310 info ] @503 qtp385337537-12: select all hotels Doing it successfully!
+[07:29:01:312 info ] @42 qtp385337537-12: Doing it successfully!login to homepage
+[07:29:04:100 info ] @71 qtp385337537-15: The same session,go to Homepage
+[07:29:04:110 info ] @503 qtp385337537-16: select all hotels Doing it successfully!
+[07:29:04:113 info ] @42 qtp385337537-16: Doing it successfully!login to homepage
+[07:29:10:667 info ] @71 qtp385337537-18: The same session,go to Homepage
+[07:29:10:680 info ] @503 qtp385337537-19: select all hotels Doing it successfully!
+[07:29:10:687 info ] @42 qtp385337537-19: Doing it successfully!login to homepage
+[07:29:11:894 info ] @71 qtp385337537-17: The same session,go to Homepage
+[07:29:11:915 info ] @503 qtp385337537-15: select all hotels Doing it successfully!
+[07:29:11:917 info ] @42 qtp385337537-15: Doing it successfully!login to homepage
+[07:30:58:295 info ] @63 qtp385337537-18: not the same session,go to login
+[07:31:02:686 info ] @63 qtp385337537-12: not the same session,go to login
+[07:31:04:409 info ] @63 qtp385337537-15: not the same session,go to login
+[07:31:18:368 info ] @63 qtp385337537-19: not the same session,go to login
+[07:31:20:798 info ] @63 qtp385337537-13: not the same session,go to login

@@ -1,17 +1,13 @@
 package Controller.Servlet;
 
-import Model.Global;
-import Model.Hotel;
-import Model.Status;
+import Model.*;
 import org.apache.commons.lang3.StringEscapeUtils;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.DateFormat;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -161,18 +157,18 @@ public class BaseServlet extends HttpServlet
 
         out.println("<div class=\"container\">");
         out.println("<h2>Register</h2>");
-        out.println("<form action=\"/login\" method=\"post\">"); // the form will be processed by POST
+        out.println("<form action=\"/register\" method=\"post\">"); // the form will be processed by POST
         out.println("<div class=\"form-group\">");
         out.println("<label for=\"username\">Username:</label>");
-        out.println("<input type=\"text\" class=\"form-control\" id=\"username\" size=\"30\" placeholder=\"Enter username\">");
+        out.println("<input type=\"text\" class=\"form-control\" name=\"username\" size=\"30\" placeholder=\"Enter username\">");
         out.println("</div>");
         out.println("<div class=\"form-group\">");
         out.println("<label for=\"pwd\">Password:</label>");
-        out.println("<input type=\"password\" class=\"form-control\" id=\"password\" size=\"30\" placeholder=\"Enter password\">");
+        out.println("<input type=\"password\" class=\"form-control\" name=\"password\" size=\"30\" placeholder=\"Enter password\">");
         out.println("</div>");
         out.println("<div class=\"form-group\">");
         out.println("<label for=\"repwd\">Re-Password:</label>");
-        out.println("<input type=\"password\" class=\"form-control\" id=\"rePassword\" size=\"30\">");
+        out.println("<input type=\"password\" class=\"form-control\" name=\"rePassword\" size=\"30\">");
         out.println("</div>");
         out.println("<p><input type=\"submit\" value=\"Register\"></p>");
         out.println("</form>");
@@ -187,11 +183,11 @@ public class BaseServlet extends HttpServlet
         out.println("<form action=\"/login\" method=\"post\">"); // the form will be processed by POST
         out.println("<div class=\"form-group\">");
         out.println("<label for=\"username\">Username:</label>");
-        out.println("<input type=\"text\" class=\"form-control\" id=\"username\" size=\"30\">");
+        out.println("<input type=\"text\" class=\"form-control\" name=\"username\" size=\"30\">");
         out.println("</div>");
         out.println("<div class=\"form-group\">");
         out.println("<label for=\"pwd\">Password:</label>");
-        out.println("<input type=\"password\" class=\"form-control\" id=\"password\" size=\"30\">");
+        out.println("<input type=\"password\" class=\"form-control\" name=\"password\" size=\"30\">");
         out.println("</div>");
         out.println("<p><input type=\"submit\" value=\"Login\"></p>");
         out.println("</form>");
@@ -207,6 +203,10 @@ public class BaseServlet extends HttpServlet
         out.println("</form>");
     }
 
+    /**
+     * display hotel table using bootstrap
+     * @param out printwriter
+     */
     protected void displayHotel(PrintWriter out)
     {
         assert out != null;
@@ -221,7 +221,7 @@ public class BaseServlet extends HttpServlet
         out.println("<th>city</th>");
         out.println("<th>state</th>");
         out.println("<th>country</th>");
-        out.println("<th>Reviews</th>");
+        out.println("<th>AverRating</th>");
         out.println("</tr>");
         out.println("</thead>");
         out.println("<tbody>");
@@ -231,31 +231,102 @@ public class BaseServlet extends HttpServlet
         {
             out.println("<tr>");
             out.println("<td>"+h.getHotelId()+"</td>");
-            out.println("<td>"+h.getHotelName()+"</td>");
-            out.println("<td></td>")
+            out.println("<td><a href=\"/reviews?hotelId=" + h.getHotelId() + "\">"+h.getHotelName()+"</a></td>");
+            out.println("<td>"+h.getHotelAddress().getStreetAddress()+"</td>");
+            out.println("<td>"+h.getHotelAddress().getCity()+"</td>");
+            out.println("<td>"+h.getHotelAddress().getState()+"</td>");
+            out.println("<td>USA</td>");
+            DecimalFormat df=new DecimalFormat("#.##");
+            out.println("<td>"+df.format(h.getAverRating())+"</td>");
+            out.println("</tr>");
         }
+        out.println("</tbody>");
+        out.println("</table>");
+        out.println("</div>");
 
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+    }
 
+    /**
+     * display a new TextArea to add new review
+     * @param out printWriter
+     */
+    protected void displayComment(PrintWriter out,String hotelId)
+    {
+        out.println("<div class=\"container\">");
+        out.println("<form action=\"/addReview\" method=\"post\">");
+
+        out.println("<div class=\"form-group\">");
+        out.println("<label for=\"reviewTitle\">ReviewTitle:</label>");
+        out.println("<input type=\"text\" class=\"form-control\" name=\"ReviewTitle\" size=\"30\">");
+        out.println("</div>");
+
+        out.println("<div class=\"form-group\">");
+        out.println("<label for=\"review\">New Review:</label>");
+        out.println("<textarea class=\"form-control\" rows=\"5\" name=\"Review\"></textarea>");
+        out.println("</div>");
+
+        out.println("<div class=\"form-group\">");
+        out.println("<label for=\"rating\">Rating:</label>");
+        out.println("<input type=\"text\" class=\"form-control\" name=\"Rating\" size=\"30\">");
+        out.println("</div>");
+
+        out.println("<div class=\"form-group\">");
+        out.println("<input type=\"hidden\" name=\"hotelId\" value=\""+hotelId+"\"");
+
+        out.println("<p><input type=\"submit\" value=\"Add\"></p>");
+        out.println("</form>");
+        out.println("</div>");
+    }
+
+    /**
+     * display reviews of the specific hotel
+     * @param out printWriter
+     * @param hotelId hotelId
+     */
+    protected void displayReview(PrintWriter out,String hotelId,String username)
+    {
+        assert out != null;
+        boolean hasReview=false;
+        out.println("<div class=\"container\">");
+        out.println("<h2>Reviews</h2>");
+        out.println("<table class=\"table\">");
+        out.println("<thead>");
+        out.println("<tr>");
+        out.println("<th>Review Id</th>");
+        out.println("<th>Review Title</th>");
+        out.println("<th>Review Text</th>");
+        out.println("<th>Rating</th>");
+        out.println("<th>Date</th>");
+        out.println("<th>Username</th>");
+        out.println("</tr>");
+        out.println("</thead>");
+        out.println("<tbody>");
+        TreeSet<Review> reviews=new TreeSet<>();
+        reviews=Global.db.selectReview(hotelId);
+        for(Review r:reviews)
+        {
+            out.println("<tr>");
+            out.println("<td>"+ Helper.String2UTF8(r.getReviewId())+"</td>");
+            out.println("<td>"+r.getReviewTitle()+"</td>");
+            out.println("<td>"+r.getReview()+"</td>");
+            out.println("<td>"+r.getRating()+"</td>");
+            DateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+            String date = formatter.format(r.getDate());
+            out.println("<td>"+date+"</td>");
+            out.println("<td>"+r.getUsername()+"</td>");
+            out.println("</tr>");
+            String r_username=r.getUsername();
+            if(r_username.equals(username))
+            {
+                hasReview=true;
+            }
+        }
+        out.println("</tbody>");
+        out.println("</table>");
+        out.println("</div>");
+        //display the text area for new review
+        if(!hasReview)
+            displayComment(out,hotelId);
     }
 
 }

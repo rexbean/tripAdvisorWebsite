@@ -379,7 +379,7 @@ public class ThreadSafeHotelData extends HotelData
         Global.logger.info("Insert hotel & review data to database "+Global.status);
         for(String username:nameSet)
         {
-            User u=new User(username,username);
+            User u=new User(username,username+"456"+"*");
             u.register();
         }
         Global.status=Status.SUCCESS;

@@ -22,6 +22,7 @@ public class Hotel implements Comparable<Hotel>
     private String hotelId;
     private String hotelName;
     private HotelAddress hotelAddress;
+    private double averRating;
 
 
     public Hotel(String hotelId,String hotelName,HotelAddress hotelAddress)
@@ -30,6 +31,8 @@ public class Hotel implements Comparable<Hotel>
         this.hotelName=hotelName;
         this.hotelAddress=hotelAddress;
     }
+
+
 
     /**
      * Implements the Comparable<T> interface,override the compareTo method
@@ -114,6 +117,17 @@ public class Hotel implements Comparable<Hotel>
     public void setHotelAddress(HotelAddress hotelAddress)
     {
         this.hotelAddress=hotelAddress;
+    }
+
+
+    public void setAverRating(double averRating)
+    {
+        this.averRating = averRating;
+    }
+
+    public double getAverRating()
+    {
+        return averRating;
     }
 
     /**

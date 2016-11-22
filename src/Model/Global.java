@@ -18,6 +18,7 @@ public class Global
     public final static Logger logger= LogManager.getLogger();
     public static DBHandler db;
     public static Status status;
+    //public static User user;
 
     private Global()
     {

@@ -34,7 +34,8 @@ public class HomePageServlet extends BaseServlet
             else
             {
                 prepareResponse("homepage",response);
-                out.print("this is homepage"+user.getUsername());
+                //out.print("this is homepage"+user.getUsername());
+                displayHotel(out);
                 displayLogoutForm(out);
                 finishResponse(response);
                 Global.status= Status.SUCCESS;

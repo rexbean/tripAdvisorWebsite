@@ -100,6 +100,7 @@ public class RegisterServlet extends BaseServlet
                     }
 
                     request.getSession().setAttribute("user",user);
+                    //Global.user=user;
                     //redirect to homepage
                     response.sendRedirect("/homepage");
                 }

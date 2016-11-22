@@ -59,6 +59,8 @@ public class Main
             context.addServlet(HomePageServlet.class,"/homepage");
             context.addServlet(WelcomeServlet.class,"/");
             context.addServlet(LogoutServlet.class,"/logout");
+            context.addServlet(AddReviewServlet.class,"/addReview");
+
 
             server.setHandler(context);
             server.join();
