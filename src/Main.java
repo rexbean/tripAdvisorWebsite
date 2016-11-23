@@ -4,8 +4,10 @@ import Model.Database.DBConnector;
 import Model.Database.DBHandler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.SessionManager;
+import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.server.session.HashSessionManager;
 import org.eclipse.jetty.server.session.SessionHandler;
+import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.servlet.ServletHandler;
 
@@ -39,27 +41,22 @@ public class Main
         try
         {
            Server server=new Server(8080);
-//            ServletHandler handler = new ServletHandler();
-//            handler.addServletWithMapping(HotelInfoServlet.class,"/hotelInfo");
-//            handler.addServletWithMapping(ReviewsServlet.class,"/reviews");
-//            handler.addServletWithMapping(RegisterServlet.class,"/register");
-//            handler.addServletWithMapping(LoginServlet.class,"/login");
-//            handler.addServletWithMapping(HomePageServlet.class,"/homepage");
-//            handler.addServletWithMapping(WelcomeServlet.class,"/");
-//            server.setHandler(handler);
             ServletContextHandler context=new ServletContextHandler();
             context.setContextPath("/");
+            context.setResourceBase("js");
             SessionManager sm=new HashSessionManager();
             SessionHandler sh=new SessionHandler(sm);
+
             context.setSessionHandler(sh);
             context.addServlet(HotelInfoServlet.class,"/hotelInfo");
             context.addServlet(ReviewsServlet.class,"/reviews");
             context.addServlet(RegisterServlet.class,"/register");
             context.addServlet(LoginServlet.class,"/login");
             context.addServlet(HomePageServlet.class,"/homepage");
-            context.addServlet(WelcomeServlet.class,"/");
+            context.addServlet(WelcomeServlet.class,"/welcome");
             context.addServlet(LogoutServlet.class,"/logout");
             context.addServlet(AddReviewServlet.class,"/addReview");
+            context.addServlet(DefaultServlet.class,"/");
 
 
             server.setHandler(context);

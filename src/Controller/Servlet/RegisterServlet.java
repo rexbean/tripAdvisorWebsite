@@ -21,8 +21,8 @@ public class RegisterServlet extends BaseServlet
         try
         {
             PrintWriter out=response.getWriter();
-            prepareResponse("register",response);
-            displayRegisterForm(out);
+            //prepareResponse("register",response);
+            displayRegisterForm(out,"register");
             finishResponse(response);
         }
         catch(IOException e)
@@ -39,78 +39,53 @@ public class RegisterServlet extends BaseServlet
     {
         try
         {
-            PrintWriter out=response.getWriter();
+            PrintWriter out;
             String username=request.getParameter("username");
             String password=request.getParameter("password");
-            String re_password=request.getParameter("rePassword");
+            HttpSession session=request.getSession();
 
-            if(username.equals("")||password.equals("")||re_password.equals(""))
+            out=response.getWriter();
+            User user=new User(username,password);
+            Global.status=user.register();
+            if(Global.status==Status.SUCCESS)
             {
-                Global.status= Status.ERROR;
-                Global.logger.fatal(Global.status.toString()+"register, input is invalid");
-                //clear the input
-                //return error message
-            }
-            else if(!password.equals(re_password))
-            {
-                Global.status= Status.ERROR;
-                Global.logger.fatal(Global.status.toString()+"register, password is not equal to re_password");
-                //clear the input
-                //return error message
-            }
-            else
-            {
-                HttpSession session=request.getSession();
-
-                User user=new User(username,password);
-                Global.status=user.register();
-                if(Global.status==Status.SUCCESS)
+                boolean isExist=false;
+                Cookie loginCookie = null;
+                Cookie cookies[] = request.getCookies();
+                if(cookies!=null)
                 {
-                    boolean isExist=false;
-                    Cookie loginCookie = null;
-                    Cookie cookies[] = request.getCookies();
-                    if(cookies!=null)
+                    for(Cookie cookie:cookies)
                     {
-                        for(Cookie cookie:cookies)
+                        if("userLogin".equals(cookie.getName()))
                         {
-
-                            if("userLogin".equals(cookie.getName()))
-                            {
-                                loginCookie=cookie;
-                                String value=session.getId();
-                                cookie.setValue(value);
-                                isExist=true;
-                            }
-
-                        }
-                        if(!isExist)
-                        {
+                            loginCookie=cookie;
                             String value=session.getId();
-                            loginCookie = new Cookie("userLogin", value);
-                            loginCookie.setMaxAge(60*60*24);
-                            response.addCookie(loginCookie);
+                            cookie.setValue(value);
+                            isExist=true;
                         }
                     }
-                    else
+                    if(!isExist)
                     {
                         String value=session.getId();
                         loginCookie = new Cookie("userLogin", value);
                         loginCookie.setMaxAge(60*60*24);
                         response.addCookie(loginCookie);
                     }
-
-                    request.getSession().setAttribute("user",user);
-                    //Global.user=user;
-                    //redirect to homepage
-                    response.sendRedirect("/homepage");
                 }
                 else
                 {
-                    //clear the input
-                    //return error message
+                    String value=session.getId();
+                    loginCookie = new Cookie("userLogin", value);
+                    loginCookie.setMaxAge(60*60*24);
+                    response.addCookie(loginCookie);
                 }
-
-
+                request.getSession().setAttribute("user",user);
+                //redirect to homepage
+                response.sendRedirect("/homepage");
+            }
+            else
+            {
+                displayRegisterERROR(out,"Register");
             }
         }
         catch(IOException e)
@@ -118,6 +93,7 @@ public class RegisterServlet extends BaseServlet
             e.printStackTrace();
             Global.status= Status.ERROR;
             Global.logger.fatal(Global.status.toString()+"register=post");
+            //displayRegisterFormD(out,"Register");
         }
 
     }

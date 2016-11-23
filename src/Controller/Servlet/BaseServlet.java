@@ -48,12 +48,12 @@ public class BaseServlet extends HttpServlet
             PrintWriter writer = response.getWriter();
 
             writer.println();
-            writer.println("<div>");
-            writer.println("<p style=\"font-size: 10pt; font-style: italic;\">");
-            writer.println("Last updated at " + getDate());
-            writer.println("</p>");
+//            writer.println("<div>");
+//            writer.println("<p style=\"font-size: 10pt; font-style: italic;\">");
+//            writer.println("Last updated at " + getDate());
+//            writer.println("</p>");
 
-            writer.println("</div>");
+            //writer.println("</div>");
 
             writer.println("</body>");
             writer.println("</html>");
@@ -151,45 +151,148 @@ public class BaseServlet extends HttpServlet
     /**
      * Writes and HTML form that shows two textfields and a button to the PrintWriter
      */
-    protected void displayRegisterForm(PrintWriter out)
+    protected void displayRegisterForm(PrintWriter out,String title)
     {
         assert out != null;
 
+
+        out.println("<!DOCTYPE html>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("\t<title>" + title + "</title>");
+        out.println("<meta charset=\"utf-8\">");
+        out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
+        out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">");
+        out.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n");
+        out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n");
+        out.println("<script src=\"a.js\"></script>");
+        out.println("</head>");
+        out.println("<body>");
+
         out.println("<div class=\"container\">");
         out.println("<h2>Register</h2>");
-        out.println("<form action=\"/register\" method=\"post\">"); // the form will be processed by POST
+        out.println("<form action=\"/register\" method=\"post\" name=\"registerForm\">"); // the form will be processed by POST
         out.println("<div class=\"form-group\">");
         out.println("<label for=\"username\">Username:</label>");
-        out.println("<input type=\"text\" class=\"form-control\" name=\"username\" size=\"30\" placeholder=\"Enter username\">");
+        out.println("<input type=\"text\" class=\"form-control\" name=\"username\"  id=\"username\" size=\"30\" placeholder=\"Enter username\">");
         out.println("</div>");
         out.println("<div class=\"form-group\">");
         out.println("<label for=\"pwd\">Password:</label>");
-        out.println("<input type=\"password\" class=\"form-control\" name=\"password\" size=\"30\" placeholder=\"Enter password\">");
+        out.println("<input type=\"password\" class=\"form-control\" name=\"password\" id=\"password\" size=\"30\" placeholder=\"Enter password\">");
         out.println("</div>");
         out.println("<div class=\"form-group\">");
         out.println("<label for=\"repwd\">Re-Password:</label>");
-        out.println("<input type=\"password\" class=\"form-control\" name=\"rePassword\" size=\"30\">");
+        out.println("<input type=\"password\" class=\"form-control\" name=\"rePassword\" id=\"rePassword\" size=\"30\" placeholder=\"ReEnter password\" >");
         out.println("</div>");
-        out.println("<p><input type=\"submit\" value=\"Register\"></p>");
+
+        out.println("<p><input type=\"submit\" id=\"btn\" value=\"Register\" onclick=\"return a()\"></p>");
         out.println("</form>");
         out.println("</div>");
     }
 
-    protected void displayLoginForm(PrintWriter out)
+    /**
+     * Writes and HTML form that shows two textfields and a button to the PrintWriter
+     */
+    protected void displayRegisterERROR(PrintWriter out,String title)
     {
         assert out != null;
+
+
+        out.println("<!DOCTYPE html>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("\t<title>" + title + "</title>");
+        out.println("<meta charset=\"utf-8\">");
+        out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
+        out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">");
+        out.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n");
+        out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n");
+        out.println("<script src=\"a.js\"></script>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<script>alert(\'"+Global.status.toString()+"\')</script>");
+        out.println("<div class=\"container\">");
+        out.println("<h2>Register</h2>");
+        out.println("<form action=\"/register\" method=\"post\" name=\"registerForm\">"); // the form will be processed by POST
+        out.println("<div class=\"form-group\">");
+        out.println("<label for=\"username\">Username:</label>");
+        out.println("<input type=\"text\" class=\"form-control\" name=\"username\"  id=\"username\" size=\"30\" placeholder=\"Enter username\">");
+        out.println("</div>");
+        out.println("<div class=\"form-group\">");
+        out.println("<label for=\"pwd\">Password:</label>");
+        out.println("<input type=\"password\" class=\"form-control\" name=\"password\" id=\"password\" size=\"30\" placeholder=\"Enter password\">");
+        out.println("</div>");
+        out.println("<div class=\"form-group\">");
+        out.println("<label for=\"repwd\">Re-Password:</label>");
+        out.println("<input type=\"password\" class=\"form-control\" name=\"rePassword\" id=\"rePassword\" size=\"30\" placeholder=\"ReEnter password\" >");
+        out.println("</div>");
+
+        out.println("<p><input type=\"submit\" id=\"btn\" value=\"Register\" onclick=\"return a()\"></p>");
+        out.println("</form>");
+        out.println("</div>");
+    }
+
+    protected void displayLoginForm(PrintWriter out,String title)
+    {
+        assert out != null;
+
+        out.println("<!DOCTYPE html>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("\t<title>" + title + "</title>");
+        out.println("<meta charset=\"utf-8\">");
+        out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
+        out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">");
+        out.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n");
+        out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n");
+        out.println("<script src=\"b.js\"></script>");
+        out.println("</head>");
+        out.println("<body>");
         out.println("<div class=\"container\">");
         out.println("<h2>Login</h2>");
         out.println("<form action=\"/login\" method=\"post\">"); // the form will be processed by POST
         out.println("<div class=\"form-group\">");
         out.println("<label for=\"username\">Username:</label>");
-        out.println("<input type=\"text\" class=\"form-control\" name=\"username\" size=\"30\">");
+        out.println("<input type=\"text\" class=\"form-control\" name=\"username\" id=\"username\" size=\"30\">");
         out.println("</div>");
         out.println("<div class=\"form-group\">");
         out.println("<label for=\"pwd\">Password:</label>");
-        out.println("<input type=\"password\" class=\"form-control\" name=\"password\" size=\"30\">");
+        out.println("<input type=\"password\" class=\"form-control\" name=\"password\" id=\"password\" size=\"30\">");
         out.println("</div>");
-        out.println("<p><input type=\"submit\" value=\"Login\"></p>");
+        out.println("<p><input type=\"submit\" value=\"Login\" onclick=\"return b()\"></p>");
+        out.println("</form>");
+        out.println("</div>");
+    }
+
+    protected void displayLoginERROR(PrintWriter out,String title)
+    {
+        assert out != null;
+
+        out.println("<!DOCTYPE html>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("\t<title>" + title + "</title>");
+        out.println("<meta charset=\"utf-8\">");
+        out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
+        out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">");
+        out.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n");
+        out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n");
+        out.println("<script src=\"b.js\"></script>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<script>alert(\'"+Global.status.toString()+"\')</script>");
+        out.println("<div class=\"container\">");
+        out.println("<h2>Login</h2>");
+        out.println("<form action=\"/login\" method=\"post\">"); // the form will be processed by POST
+        out.println("<div class=\"form-group\">");
+        out.println("<label for=\"username\">Username:</label>");
+        out.println("<input type=\"text\" class=\"form-control\" name=\"username\" id=\"username\" size=\"30\">");
+        out.println("</div>");
+        out.println("<div class=\"form-group\">");
+        out.println("<label for=\"pwd\">Password:</label>");
+        out.println("<input type=\"password\" class=\"form-control\" name=\"password\" id=\"password\" size=\"30\">");
+        out.println("</div>");
+        out.println("<p><input type=\"submit\" value=\"Login\" onclick=\"return b()\"></p>");
         out.println("</form>");
         out.println("</div>");
     }
