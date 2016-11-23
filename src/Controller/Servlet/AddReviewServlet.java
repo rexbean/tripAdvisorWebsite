@@ -56,8 +56,8 @@ public class AddReviewServlet extends BaseServlet
                 Global.status= Status.SUCCESS;
                 Global.logger.info("add a new review "+Global.status.toString());
 
-                prepareResponse("review",response);
-                displayLogoutForm(out);
+                //prepareResponse("review",response);
+                //displayLogoutForm(out);
                 displayReview(out,hotelId,username);
                 finishResponse(response);
             }

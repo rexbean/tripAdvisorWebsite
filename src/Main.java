@@ -40,7 +40,7 @@ public class Main
 
         try
         {
-           Server server=new Server(8080);
+            Server server=new Server(8080);
             ServletContextHandler context=new ServletContextHandler();
             context.setContextPath("/");
             context.setResourceBase("js");

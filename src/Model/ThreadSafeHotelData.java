@@ -363,8 +363,12 @@ public class ThreadSafeHotelData extends HotelData
             {
                 for(Review r:set)
                 {
-                    Global.db.addReview(r);
-                    nameSet.add(r.getUsername());
+                    if(!r.getUsername().equals("anonymous"))
+                    {
+                        Global.db.addReview(r);
+                        nameSet.add(r.getUsername());
+                    }
+
                 }
             }
             else

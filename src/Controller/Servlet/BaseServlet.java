@@ -302,7 +302,7 @@ public class BaseServlet extends HttpServlet
         assert out != null;
 
         out.println("<form action=\"/logout\" method=\"post\">"); // the form will be processed by POST
-        out.println("<p><input type=\"submit\" value=\"Logout\"></p>");
+        out.println("<p><input type=\"submit\" value=\"Login\"></p>");
         out.println("</form>");
     }
 
@@ -370,13 +370,13 @@ public class BaseServlet extends HttpServlet
 
         out.println("<div class=\"form-group\">");
         out.println("<label for=\"rating\">Rating:</label>");
-        out.println("<input type=\"text\" class=\"form-control\" name=\"Rating\" size=\"30\">");
+        out.println("<input type=\"text\" class=\"form-control\" name=\"Rating\" id=\"rating\" size=\"30\">");
         out.println("</div>");
 
         out.println("<div class=\"form-group\">");
         out.println("<input type=\"hidden\" name=\"hotelId\" value=\""+hotelId+"\"");
 
-        out.println("<p><input type=\"submit\" value=\"Add\"></p>");
+        out.println("<p><input type=\"submit\" value=\"Add\" onclick=\"return c()\"></p>");
         out.println("</form>");
         out.println("</div>");
     }
@@ -390,6 +390,21 @@ public class BaseServlet extends HttpServlet
     {
         assert out != null;
         boolean hasReview=false;
+
+
+        out.println("<!DOCTYPE html>");
+        out.println("<html>");
+        out.println("<head>");
+        out.println("\t<title>Review</title>");
+        out.println("<meta charset=\"utf-8\">");
+        out.println("<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">");
+        out.println("<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">");
+        out.println("<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n");
+        out.println("<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n");
+        out.println("</head>");
+        out.println("<body>");
+
+        displayLogoutForm(out);
         out.println("<div class=\"container\">");
         out.println("<h2>Reviews</h2>");
         out.println("<table class=\"table\">");
