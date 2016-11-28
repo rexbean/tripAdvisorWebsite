@@ -1,17 +1,13 @@
 import Controller.Servlet.*;
 import Model.*;
-import Model.Database.DBConnector;
 import Model.Database.DBHandler;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.SessionManager;
-import org.eclipse.jetty.server.handler.ResourceHandler;
 import org.eclipse.jetty.server.session.HashSessionManager;
 import org.eclipse.jetty.server.session.SessionHandler;
 import org.eclipse.jetty.servlet.DefaultServlet;
 import org.eclipse.jetty.servlet.ServletContextHandler;
-import org.eclipse.jetty.servlet.ServletHandler;
 
-import java.io.IOException;
 import java.nio.file.Paths;
 
 public class Main
@@ -21,20 +17,20 @@ public class Main
     {
         System.out.println("Hello World!");
         //DBConnector db=new DBConnector();
-        Global.hotelData=new ThreadSafeHotelData();
-        Global.hotelData.loadHotelInfo("input/hotels200.json");
-        Global.hotelData.loadReviews(Paths.get("input/reviews"));
+        A.hotelData=new ThreadSafeHotelData();
+        A.hotelData.loadHotelInfo("input/hotels200.json");
+        A.hotelData.loadReviews(Paths.get("input/reviews"));
 
-        Global.db=DBHandler.getInstance();
-        Global.db.checkData();
+        A.db=DBHandler.getInstance();
+        A.db.checkData();
 
-        //Hotel h=Global.db.selectHotel("10323");
+        //Hotel h=A.db.selectHotel("10323");
         //String s=h.toJSONString(true);
         //System.out.println(s);
         //User u=new User("aacf","bbbbbb");
         //u.register();
         //u.login();
-        //Global.db.createTableReview();
+        //A.db.createTableReview();
 
 
 
@@ -66,7 +62,7 @@ public class Main
         catch(Exception e)
         {
             Status s= Status.ERROR;
-            Global.logger.fatal(s.toString()+"starting server");
+            A.logger.fatal(s.toString()+"starting server");
         }
 
         //handler.addServletWithMapping(Error.class,"/");

@@ -71,7 +71,7 @@ public class Helper
         catch (NoSuchAlgorithmException e)
         {
             status=Status.ERROR;
-            Global.logger.fatal(status.toString()+"md5");
+            A.logger.fatal(status.toString()+"md5");
             e.printStackTrace();
         }
         return md5;

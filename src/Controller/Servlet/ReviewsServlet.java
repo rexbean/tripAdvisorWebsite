@@ -1,20 +1,17 @@
 package Controller.Servlet;
 
-import Model.Global;
+import Model.A;
 import Model.Review;
 import Model.User;
 import org.apache.commons.lang3.StringEscapeUtils;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Iterator;
-import java.util.LinkedHashMap;
 import java.util.TreeSet;
 
 /**
@@ -57,7 +54,7 @@ public class ReviewsServlet extends BaseServlet
         }
         catch(IOException e)
         {
-            Global.logger.fatal("There is some IOException ");
+            A.logger.fatal("There is some IOException ");
         }
 
     }
@@ -75,7 +72,7 @@ public class ReviewsServlet extends BaseServlet
         }
         catch(IOException e)
         {
-            Global.logger.fatal("There is some IOException ");
+            A.logger.fatal("There is some IOException ");
         }
     }
 
@@ -95,7 +92,7 @@ public class ReviewsServlet extends BaseServlet
             s_num = StringEscapeUtils.escapeHtml4(s_num);
             int num = Integer.valueOf(s_num);
             //get reviews from database
-            TreeSet<Review> set=Global.db.selectReview(hotelId);
+            TreeSet<Review> set= A.db.selectReview(hotelId);
             if(set==null)
             {
                 JSONObject obj=new JSONObject();

@@ -1,6 +1,6 @@
 package Controller.Servlet;
 
-import Model.Global;
+import Model.A;
 import Model.Review;
 import Model.Status;
 import Model.User;
@@ -52,9 +52,9 @@ public class AddReviewServlet extends BaseServlet
                 Integer rating=Integer.parseInt(request.getParameter("Rating"));
                 UUID reviewId=UUID.randomUUID();
                 Review r=new Review (hotelId,reviewId.toString(),rating,reviewTitle,reviewText,true,date,username);
-                Global.db.addReview(r);
-                Global.status= Status.SUCCESS;
-                Global.logger.info("add a new review "+Global.status.toString());
+                A.db.addReview(r);
+                A.status= Status.SUCCESS;
+                A.logger.info("add a new review "+ A.status.toString());
 
                 //prepareResponse("review",response);
                 //displayLogoutForm(out);
@@ -66,15 +66,15 @@ public class AddReviewServlet extends BaseServlet
         catch(IOException e)
         {
             e.printStackTrace();
-            Global.status= Status.ERROR;
-            Global.logger.fatal(Global.status.toString()+"add a new review ");
+            A.status= Status.ERROR;
+            A.logger.fatal(A.status.toString()+"add a new review ");
 
         }
         catch(ParseException e)
         {
             e.printStackTrace();
-            Global.status= Status.ERROR;
-            Global.logger.fatal(Global.status.toString()+"add a new review ");
+            A.status= Status.ERROR;
+            A.logger.fatal(A.status.toString()+"add a new review ");
         }
 
 

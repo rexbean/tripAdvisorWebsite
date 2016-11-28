@@ -1,9 +1,5 @@
 package Model;
 
-import Model.Database.DBHandler;
-
-import javax.xml.bind.annotation.XmlElementDecl;
-
 /**
  * Created by zihaoli on 11/12/16.
  */
@@ -66,37 +62,37 @@ public class User
         String salt=Helper.encodeHex(b_salt,32);
 
         password=Helper.md5(password+salt);
-        Global.status=Global.db.addUser(username,password,salt);
-        if(Global.status==Status.SUCCESS)
+        A.status= A.db.addUser(username,password,salt);
+        if(A.status==Status.SUCCESS)
         {
-            Global.logger.info(Global.status.toString()+" in registering a new user " );
-            return Global.status;
+            A.logger.info(A.status.toString()+" in registering a new user " );
+            return A.status;
         }
         else
         {
-            Global.logger.fatal(Global.status.toString()+" "+username);
-            return Global.status;
+            A.logger.fatal(A.status.toString()+" "+username);
+            return A.status;
         }
     }
 
     public Status login()
     {
-        salt=Global.db.getSalt(username);
+        salt= A.db.getSalt(username);
         if(salt.equals(""))
         {
-            Global.status=Status.INVALID_USER;
-            Global.logger.fatal(Global.status.toString());
-            return Global.status;
+            A.status=Status.INVALID_USER;
+            A.logger.fatal(A.status.toString());
+            return A.status;
         }
         else
         {
             password=Helper.md5(password+salt);
-            Global.status=authentication(username,password);
-            if(Global.status==Status.SUCCESS)
-                Global.logger.info("login "+Global.status.toString());
+            A.status=authentication(username,password);
+            if(A.status==Status.SUCCESS)
+                A.logger.info("login "+ A.status.toString());
             else
-                Global.logger.fatal("login "+Global.status.toString());
-            return Global.status;
+                A.logger.fatal("login "+ A.status.toString());
+            return A.status;
         }
     }
 
@@ -111,17 +107,17 @@ public class User
 
 
 
-        if(Global.db.authentic(username,password))
+        if(A.db.authentic(username,password))
         {
-            Global.status=Status.SUCCESS;
-            Global.logger.info("authentic "+Global.status.toString());
-            return Global.status;
+            A.status=Status.SUCCESS;
+            A.logger.info("authentic "+ A.status.toString());
+            return A.status;
         }
         else
         {
-            Global.status=Status.INVALID_LOGIN;
-            Global.logger.info("authentic "+Global.status.toString());
-            return Global.status;
+            A.status=Status.INVALID_LOGIN;
+            A.logger.info("authentic "+ A.status.toString());
+            return A.status;
         }
     }
 

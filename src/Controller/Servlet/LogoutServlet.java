@@ -1,9 +1,8 @@
 package Controller.Servlet;
 
-import Model.Global;
+import Model.A;
 import Model.Status;
 import Model.User;
-import com.sun.xml.internal.rngom.parse.host.Base;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -41,8 +40,8 @@ public class LogoutServlet extends BaseServlet
         catch(IOException e)
         {
             e.printStackTrace();
-            Global.status= Status.ERROR;
-            Global.logger.fatal(Global.status.toString()+"register");
+            A.status= Status.ERROR;
+            A.logger.fatal(A.status.toString()+"register");
         }
 
 

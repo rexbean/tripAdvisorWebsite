@@ -1,7 +1,6 @@
 package Controller.Servlet;
 
 import Model.*;
-import org.apache.commons.lang3.StringEscapeUtils;
 
 import javax.servlet.http.*;
 import java.io.IOException;
@@ -210,7 +209,7 @@ public class BaseServlet extends HttpServlet
         out.println("<script src=\"a.js\"></script>");
         out.println("</head>");
         out.println("<body>");
-        out.println("<script>alert(\'"+Global.status.toString()+"\')</script>");
+        out.println("<script>alert(\'"+ A.status.toString()+"\')</script>");
         out.println("<div class=\"container\">");
         out.println("<h2>Register</h2>");
         out.println("<form action=\"/register\" method=\"post\" name=\"registerForm\">"); // the form will be processed by POST
@@ -280,7 +279,7 @@ public class BaseServlet extends HttpServlet
         out.println("<script src=\"b.js\"></script>");
         out.println("</head>");
         out.println("<body>");
-        out.println("<script>alert(\'"+Global.status.toString()+"\')</script>");
+        out.println("<script>alert(\'"+ A.status.toString()+"\')</script>");
         out.println("<div class=\"container\">");
         out.println("<h2>Login</h2>");
         out.println("<form action=\"/login\" method=\"post\">"); // the form will be processed by POST
@@ -329,7 +328,7 @@ public class BaseServlet extends HttpServlet
         out.println("</thead>");
         out.println("<tbody>");
         ArrayList<Hotel> hotels=new ArrayList<>();
-        hotels=Global.db.selectAllHotels();
+        hotels= A.db.selectAllHotels();
         for(Hotel h:hotels)
         {
             out.println("<tr>");
@@ -420,7 +419,7 @@ public class BaseServlet extends HttpServlet
         out.println("</thead>");
         out.println("<tbody>");
         TreeSet<Review> reviews=new TreeSet<>();
-        reviews=Global.db.selectReview(hotelId);
+        reviews= A.db.selectReview(hotelId);
         for(Review r:reviews)
         {
             out.println("<tr>");

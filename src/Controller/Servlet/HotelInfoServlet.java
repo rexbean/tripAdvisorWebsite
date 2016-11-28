@@ -1,11 +1,10 @@
 package Controller.Servlet;
 
-import Model.Global;
+import Model.A;
 import Model.Hotel;
 import org.apache.commons.lang3.StringEscapeUtils;
 
 import javax.servlet.ServletException;
-import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -23,7 +22,7 @@ public class HotelInfoServlet extends BaseServlet
         String hotelId=request.getParameter("hotelId");
         hotelId= StringEscapeUtils.escapeHtml4(hotelId);
         //result=data.getHotelInfo(hotelId);
-        Hotel h=Global.db.selectHotel(hotelId);
+        Hotel h= A.db.selectHotel(hotelId);
         boolean b=(h!=null);
         try
         {
@@ -37,7 +36,7 @@ public class HotelInfoServlet extends BaseServlet
         }
         catch(IOException e)
         {
-            Global.logger.fatal("There is some IOException ");
+            A.logger.fatal("There is some IOException ");
         }
 
     }
@@ -56,7 +55,7 @@ public class HotelInfoServlet extends BaseServlet
         }
         catch(IOException e)
         {
-            Global.logger.fatal("There is some IOException ");
+            A.logger.fatal("There is some IOException ");
         }
     }
 }

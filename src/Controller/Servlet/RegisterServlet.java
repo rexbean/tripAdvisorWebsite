@@ -1,7 +1,6 @@
 package Controller.Servlet;
 
-import Model.Global;
-import Model.Helper;
+import Model.A;
 import Model.Status;
 import Model.User;
 
@@ -28,8 +27,8 @@ public class RegisterServlet extends BaseServlet
         catch(IOException e)
         {
             e.printStackTrace();
-            Global.status= Status.ERROR;
-            Global.logger.fatal(Global.status.toString()+"register=get");
+            A.status= Status.ERROR;
+            A.logger.fatal(A.status.toString()+"register=get");
         }
 
     }
@@ -46,8 +45,8 @@ public class RegisterServlet extends BaseServlet
 
             out=response.getWriter();
             User user=new User(username,password);
-            Global.status=user.register();
-            if(Global.status==Status.SUCCESS)
+            A.status=user.register();
+            if(A.status==Status.SUCCESS)
             {
                 boolean isExist=false;
                 Cookie loginCookie = null;
@@ -91,8 +90,8 @@ public class RegisterServlet extends BaseServlet
         catch(IOException e)
         {
             e.printStackTrace();
-            Global.status= Status.ERROR;
-            Global.logger.fatal(Global.status.toString()+"register=post");
+            A.status= Status.ERROR;
+            A.logger.fatal(A.status.toString()+"register=post");
             //displayRegisterFormD(out,"Register");
         }
 

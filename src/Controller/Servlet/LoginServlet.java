@@ -1,7 +1,6 @@
 package Controller.Servlet;
 
-import Model.Global;
-import Model.Helper;
+import Model.A;
 import Model.Status;
 import Model.User;
 
@@ -27,8 +26,8 @@ public class LoginServlet extends BaseServlet
         catch(IOException e)
         {
             e.printStackTrace();
-            Global.status= Status.ERROR;
-            Global.logger.fatal(Global.status.toString()+"register=get");
+            A.status= Status.ERROR;
+            A.logger.fatal(A.status.toString()+"register=get");
         }
     }
 
@@ -43,10 +42,10 @@ public class LoginServlet extends BaseServlet
             String password=request.getParameter("password");
 
             User user=new User(username,password);
-            Global.status=user.login();
-            if(Global.status==Status.SUCCESS)
+            A.status=user.login();
+            if(A.status==Status.SUCCESS)
             {
-                String salt=Global.db.getSalt(username);
+                String salt= A.db.getSalt(username);
                 boolean isExist=false;
                 Cookie loginCookie = null;
                 Cookie cookies[] = request.getCookies();
@@ -69,7 +68,7 @@ public class LoginServlet extends BaseServlet
                     response.addCookie(loginCookie);
                 }
                 request.getSession().setAttribute("user",user);
-                    //Global.user=user;
+                    //A.user=user;
                     //redirect to homepage
                 response.sendRedirect("/homepage");
             }
@@ -82,8 +81,8 @@ public class LoginServlet extends BaseServlet
         catch(IOException e)
         {
             e.printStackTrace();
-            Global.status= Status.ERROR;
-            Global.logger.fatal(Global.status.toString()+"register");
+            A.status= Status.ERROR;
+            A.logger.fatal(A.status.toString()+"register");
         }
 
     }

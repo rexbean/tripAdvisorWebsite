@@ -1,6 +1,6 @@
 package Controller.Servlet;
 
-import Model.Global;
+import Model.A;
 import Model.Status;
 import Model.User;
 
@@ -28,8 +28,8 @@ public class HomePageServlet extends BaseServlet
 
                 response.sendRedirect("/login");
                 out.println("time out!please login again!");
-                Global.status= Status.ERROR;
-                Global.logger.fatal(Global.status.toString()+"homepage.Time out please login again");
+                A.status= Status.ERROR;
+                A.logger.fatal(A.status.toString()+"homepage.Time out please login again");
             }
             else
             {
@@ -38,16 +38,16 @@ public class HomePageServlet extends BaseServlet
                 displayLogoutForm(out);
                 displayHotel(out);
                 finishResponse(response);
-                Global.status= Status.SUCCESS;
-                Global.logger.info(Global.status.toString()+"login to homepage");
+                A.status= Status.SUCCESS;
+                A.logger.info(A.status.toString()+"login to homepage");
             }
 
         }
         catch(IOException e)
         {
             e.printStackTrace();
-            Global.status= Status.ERROR;
-            Global.logger.fatal(Global.status.toString()+"homepage");
+            A.status= Status.ERROR;
+            A.logger.fatal(A.status.toString()+"homepage");
         }
 
 

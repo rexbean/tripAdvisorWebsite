@@ -354,9 +354,9 @@ public class ThreadSafeHotelData extends HotelData
 
             Hotel h=hotelMap.get(hotelId);
             if(h!=null)
-                Global.db.addHotel(h);
+                A.db.addHotel(h);
             else
-                Global.logger.fatal("Do not have hotel"+hotelId);
+                A.logger.fatal("Do not have hotel"+hotelId);
 
             TreeSet<Review> set=reviewMap.get(hotelId);
             if(set!=null&&set.size()!=0)
@@ -365,7 +365,7 @@ public class ThreadSafeHotelData extends HotelData
                 {
                     if(!r.getUsername().equals("anonymous"))
                     {
-                        Global.db.addReview(r);
+                        A.db.addReview(r);
                         nameSet.add(r.getUsername());
                     }
 
@@ -373,21 +373,21 @@ public class ThreadSafeHotelData extends HotelData
             }
             else
             {
-                Global.logger.info(hotelId+"do not have reviews");
+                A.logger.info(hotelId+"do not have reviews");
             }
 
-            Global.status=Status.SUCCESS;
-            Global.logger.info("Insert hotel & review for "+hotelId+" "+Global.status);
+            A.status=Status.SUCCESS;
+            A.logger.info("Insert hotel & review for "+hotelId+" "+ A.status);
         }
-        Global.status=Status.SUCCESS;
-        Global.logger.info("Insert hotel & review data to database "+Global.status);
+        A.status=Status.SUCCESS;
+        A.logger.info("Insert hotel & review data to database "+ A.status);
         for(String username:nameSet)
         {
             User u=new User(username,username+"456"+"*");
             u.register();
         }
-        Global.status=Status.SUCCESS;
-        Global.logger.info("Insert fake user to database "+Global.status);
+        A.status=Status.SUCCESS;
+        A.logger.info("Insert fake user to database "+ A.status);
 
 
     }

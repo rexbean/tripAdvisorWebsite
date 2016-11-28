@@ -1,9 +1,7 @@
 package Model.Database;
 
-import Model.Global;
-import Model.Status;
+import Model.A;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.sql.*;
@@ -54,7 +52,7 @@ public class DBConnector
     {
         try
         {
-            connection= DriverManager.getConnection(Global.url,username,password);
+            connection= DriverManager.getConnection(A.url,username,password);
 
         }
         catch(SQLException e)

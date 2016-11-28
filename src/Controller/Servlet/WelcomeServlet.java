@@ -1,8 +1,7 @@
 package Controller.Servlet;
 
-import Model.Global;
+import Model.A;
 import Model.Status;
-import Model.User;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -29,8 +28,8 @@ public class WelcomeServlet extends BaseServlet
             {
                 //out.print("Go to Register");
                 //redirect to register;
-                Global.status=Status.SUCCESS;
-                Global.logger.info("cookie is null, go to the register.");
+                A.status=Status.SUCCESS;
+                A.logger.info("cookie is null, go to the register.");
                 response.sendRedirect("/register");
 
             }
@@ -47,8 +46,8 @@ public class WelcomeServlet extends BaseServlet
                 {
                     //out.print("Go to Register");
                     response.sendRedirect("/register");
-                    Global.status=Status.SUCCESS;
-                    Global.logger.info("Do not have loginCookie, go to the register.");
+                    A.status=Status.SUCCESS;
+                    A.logger.info("Do not have loginCookie, go to the register.");
                     response.sendRedirect("/register");
                 }
                 else
@@ -59,16 +58,16 @@ public class WelcomeServlet extends BaseServlet
                     {
                         out.print("Go to Login");
                         //redirect to login
-                        Global.status=Status.SUCCESS;
-                        Global.logger.info("not the same session,go to login");
+                        A.status=Status.SUCCESS;
+                        A.logger.info("not the same session,go to login");
                         response.sendRedirect("/login");
                     }
                     else
                     {
                         out.print("Go to Homepage");
                         //redirect to homepage
-                        Global.status=Status.SUCCESS;
-                        Global.logger.info("The same session,go to Homepage");
+                        A.status=Status.SUCCESS;
+                        A.logger.info("The same session,go to Homepage");
                         response.sendRedirect("/homepage");
                     }
                 }
@@ -77,8 +76,8 @@ public class WelcomeServlet extends BaseServlet
         catch(IOException e)
         {
             e.printStackTrace();
-            Global.status=Status.ERROR;
-            Global.logger.fatal(Global.status.toString()+"welcomeServlet");
+            A.status=Status.ERROR;
+            A.logger.fatal(A.status.toString()+"welcomeServlet");
         }
 
 

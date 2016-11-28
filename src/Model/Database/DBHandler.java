@@ -1,10 +1,7 @@
 package Model.Database;
 
 import Model.*;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 
-import java.nio.file.Paths;
 import java.sql.*;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -28,13 +25,13 @@ public class DBHandler
             boolean hasDataBase=hasDataBase();
             if(hasDataBase)
             {
-                Global.status = Status.SUCCESS;
-                Global.logger.info("connect database "+Global.status.toString());
+                A.status = Status.SUCCESS;
+                A.logger.info("connect database "+ A.status.toString());
             }
             else
             {
-                Global.status = Status.ERROR;
-                Global.logger.info(Global.status.toString()+" get the specific database");
+                A.status = Status.ERROR;
+                A.logger.info(A.status.toString()+" get the specific database");
                 //createDatabase();
                 createTableHotel();
                 createTableReview();
@@ -44,8 +41,8 @@ public class DBHandler
         }
         catch(SQLException e)
         {
-            Global.status=Status.CONNECTION_FAILED;
-            Global.logger.fatal("connect datatbase"+Global.status.toString());
+            A.status=Status.CONNECTION_FAILED;
+            A.logger.fatal("connect datatbase"+ A.status.toString());
         }
 
 
@@ -74,8 +71,8 @@ public class DBHandler
         catch(SQLException e)
         {
             e.printStackTrace();
-            Global.status=Status.ERROR;
-            Global.logger.fatal(Global.status.toString()+" checkData");
+            A.status=Status.ERROR;
+            A.logger.fatal(A.status.toString()+" checkData");
         }
     }
 
@@ -99,8 +96,8 @@ public class DBHandler
         {
 
             e.printStackTrace();
-            Global.status= Status.ERROR;
-            Global.logger.fatal(Global.status.toString()+" checking the database");
+            A.status= Status.ERROR;
+            A.logger.fatal(A.status.toString()+" checking the database");
             return false;
         }
 
@@ -124,8 +121,8 @@ public class DBHandler
         catch(SQLException e)
         {
             e.printStackTrace();
-            Global.status= Status.ERROR;
-            Global.logger.fatal(Global.status.toString()+" checking the database");
+            A.status= Status.ERROR;
+            A.logger.fatal(A.status.toString()+" checking the database");
         }
         return false;
     }
@@ -147,16 +144,16 @@ public class DBHandler
                     "username VARCHAR(255))";
             PreparedStatement statement=connection.prepareStatement(SQL);
             statement.executeUpdate();
-            Global.status=Status.SUCCESS;
-            Global.logger.info(Global.status.toString()+"in createTable reviews");
+            A.status=Status.SUCCESS;
+            A.logger.info(A.status.toString()+"in createTable reviews");
 
             //return Status.SUCCESS;
         }
         catch (SQLException e)
         {
-            Global.status=Status.SQL_EXCEPTION;
+            A.status=Status.SQL_EXCEPTION;
             e.printStackTrace();
-            Global.logger.fatal(Global.status.toString()+"in createTable reviews");
+            A.logger.fatal(A.status.toString()+"in createTable reviews");
             //return s;
         }
     }
@@ -180,16 +177,16 @@ public class DBHandler
 
             PreparedStatement statement=connection.prepareStatement(SQL);
             statement.executeUpdate();
-            Global.status=Status.SUCCESS;
-            Global.logger.info(Global.status.toString()+"in createTable hotel");
+            A.status=Status.SUCCESS;
+            A.logger.info(A.status.toString()+"in createTable hotel");
 
             //return Status.SUCCESS;
         }
         catch (SQLException e)
         {
-            Global.status=Status.SQL_EXCEPTION;
+            A.status=Status.SQL_EXCEPTION;
             e.printStackTrace();
-            Global.logger.fatal(Global.status.toString()+"in createTable hotel");
+            A.logger.fatal(A.status.toString()+"in createTable hotel");
             //return s;
         }
     }
@@ -207,23 +204,23 @@ public class DBHandler
                     "Salt VARCHAR(255))";
             PreparedStatement statement=connection.prepareStatement(SQL);
             statement.executeUpdate();
-            Global.status=Status.SUCCESS;
-            Global.logger.info(Global.status.toString()+"in createTable users");
+            A.status=Status.SUCCESS;
+            A.logger.info(A.status.toString()+"in createTable users");
 
             //return Status.SUCCESS;
         }
         catch (SQLException e)
         {
-            Global.status=Status.SQL_EXCEPTION;
+            A.status=Status.SQL_EXCEPTION;
             e.printStackTrace();
-            Global.logger.fatal(Global.status.toString()+"in createTable users");
+            A.logger.fatal(A.status.toString()+"in createTable users");
             //return s;
         }
     }
 
     public void prepareData()
     {
-        Global.hotelData.insert2Database();
+        A.hotelData.insert2Database();
     }
 
     /**
@@ -251,11 +248,11 @@ public class DBHandler
             }
             catch (SQLException e)
             {
-                Global.status=Status.SQL_EXCEPTION;
+                A.status=Status.SQL_EXCEPTION;
                 e.printStackTrace();
-                Global.logger.fatal(Global.status.toString()+"in add a new user");
+                A.logger.fatal(A.status.toString()+"in add a new user");
 
-                return Global.status;
+                return A.status;
             }
         }
         return Status.USER_EXISTED;
@@ -282,21 +279,21 @@ public class DBHandler
                 //String password=results.getString(2);
                 d_username=results.getString(1);
                 //user=new User(username,password,salt);
-                Global.status=Status.SUCCESS;
-                Global.logger.info("select user "+Global.status.toString());
+                A.status=Status.SUCCESS;
+                A.logger.info("select user "+ A.status.toString());
             }
             else
             {
-                Global.status=Status.SQL_EXCEPTION;
-                Global.logger.fatal("select user "+Global.status.toString());
+                A.status=Status.SQL_EXCEPTION;
+                A.logger.fatal("select user "+ A.status.toString());
             }
             return d_username;
         }
         catch(SQLException e)
         {
             e.printStackTrace();
-            Global.status=Status.SQL_EXCEPTION;
-            Global.logger.fatal("select user "+Global.status.toString());
+            A.status=Status.SQL_EXCEPTION;
+            A.logger.fatal("select user "+ A.status.toString());
             return d_username;
         }
 
@@ -321,21 +318,21 @@ public class DBHandler
                 //String password=results.getString(2);
                 salt=results.getString(1);
                 //user=new User(username,password,salt);
-                Global.status=Status.SUCCESS;
-                Global.logger.info("get salt "+Global.status.toString());
+                A.status=Status.SUCCESS;
+                A.logger.info("get salt "+ A.status.toString());
             }
             else
             {
-                Global.status=Status.SQL_EXCEPTION;
-                Global.logger.fatal("get salt "+Global.status.toString());
+                A.status=Status.SQL_EXCEPTION;
+                A.logger.fatal("get salt "+ A.status.toString());
             }
             return salt;
         }
         catch(SQLException e)
         {
             e.printStackTrace();
-            Global.status=Status.SQL_EXCEPTION;
-            Global.logger.fatal("get salt "+Global.status.toString());
+            A.status=Status.SQL_EXCEPTION;
+            A.logger.fatal("get salt "+ A.status.toString());
             return salt;
         }
     }
@@ -355,14 +352,14 @@ public class DBHandler
                 //String password=results.getString(2);
                 //=results.getString(1);
                 //user=new User(username,password,salt);
-                Global.status=Status.SUCCESS;
-                Global.logger.info("authentic "+Global.status.toString());
+                A.status=Status.SUCCESS;
+                A.logger.info("authentic "+ A.status.toString());
                 return true;
             }
             else
             {
-                Global.status=Status.SQL_EXCEPTION;
-                Global.logger.fatal("authentic "+Global.status.toString());
+                A.status=Status.SQL_EXCEPTION;
+                A.logger.fatal("authentic "+ A.status.toString());
                 return false;
             }
 
@@ -370,8 +367,8 @@ public class DBHandler
         catch(SQLException e)
         {
             e.printStackTrace();
-            Global.status=Status.SQL_EXCEPTION;
-            Global.logger.fatal("authentic "+Global.status.toString());
+            A.status=Status.SQL_EXCEPTION;
+            A.logger.fatal("authentic "+ A.status.toString());
             return false;
         }
     }
@@ -405,10 +402,10 @@ public class DBHandler
             }
             catch (SQLException e)
             {
-                Global.status=Status.SQL_EXCEPTION;
+                A.status=Status.SQL_EXCEPTION;
                 e.printStackTrace();
-                Global.logger.fatal(Global.status.toString()+"in add a new hotel");
-                return Global.status;
+                A.logger.fatal(A.status.toString()+"in add a new hotel");
+                return A.status;
             }
         }
         return Status.HOTEL_EXISTED;
@@ -443,21 +440,21 @@ public class DBHandler
             }
             if(hotel==null)
             {
-                Global.status=Status.SQL_EXCEPTION;
-                Global.logger.fatal("select hotel "+Global.status.toString());
+                A.status=Status.SQL_EXCEPTION;
+                A.logger.fatal("select hotel "+ A.status.toString());
             }
             else
             {
-                Global.status=Status.SUCCESS;
-                Global.logger.info("select hotel "+Global.status.toString());
+                A.status=Status.SUCCESS;
+                A.logger.info("select hotel "+ A.status.toString());
             }
             return hotel;
         }
         catch(SQLException e)
         {
             e.printStackTrace();
-            Global.status=Status.SQL_EXCEPTION;
-            Global.logger.fatal("select hotel "+Global.status.toString());
+            A.status=Status.SQL_EXCEPTION;
+            A.logger.fatal("select hotel "+ A.status.toString());
             return hotel;
         }
 
@@ -494,21 +491,21 @@ public class DBHandler
             }
             if(hotels==null)
             {
-                Global.status=Status.SQL_EXCEPTION;
-                Global.logger.fatal("select all hotels "+Global.status.toString());
+                A.status=Status.SQL_EXCEPTION;
+                A.logger.fatal("select all hotels "+ A.status.toString());
             }
             else
             {
-                Global.status=Status.SUCCESS;
-                Global.logger.info("select all hotels "+Global.status.toString());
+                A.status=Status.SUCCESS;
+                A.logger.info("select all hotels "+ A.status.toString());
             }
             return hotels;
         }
         catch(SQLException e)
         {
             e.printStackTrace();
-            Global.status=Status.SQL_EXCEPTION;
-            Global.logger.fatal("select all hotels "+Global.status.toString());
+            A.status=Status.SQL_EXCEPTION;
+            A.logger.fatal("select all hotels "+ A.status.toString());
             return hotels;
         }
     }
@@ -542,10 +539,10 @@ public class DBHandler
             }
             catch (SQLException e)
             {
-                Global.status = Status.SQL_EXCEPTION;
+                A.status = Status.SQL_EXCEPTION;
                 e.printStackTrace();
-                Global.logger.fatal(Global.status.toString() + "in add a new review");
-                return Global.status;
+                A.logger.fatal(A.status.toString() + "in add a new review");
+                return A.status;
             }
         }
         else
@@ -591,21 +588,21 @@ public class DBHandler
             }
             if(set.size()==0)
             {
-                Global.status=Status.SQL_EXCEPTION;
-                //Global.logger.fatal("select review "+Global.status.toString());
+                A.status=Status.SQL_EXCEPTION;
+                //A.logger.fatal("select review "+A.status.toString());
             }
             else
             {
-                Global.status=Status.SUCCESS;
-                //Global.logger.info("select review "+Global.status.toString());
+                A.status=Status.SUCCESS;
+                //A.logger.info("select review "+A.status.toString());
             }
             return set;
         }
         catch(SQLException e)
         {
             e.printStackTrace();
-            Global.status=Status.SQL_EXCEPTION;
-            Global.logger.fatal("select review "+Global.status.toString());
+            A.status=Status.SQL_EXCEPTION;
+            A.logger.fatal("select review "+ A.status.toString());
             return set;
         }
 

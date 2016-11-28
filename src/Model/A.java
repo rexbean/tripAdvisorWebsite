@@ -7,7 +7,7 @@ import org.apache.logging.log4j.Logger;
 /**
  * Created by zihaoli on 11/13/16.
  */
-public class Global
+public class A
 {
     public final static String port="3306";
     public final static String database="User39";
@@ -18,10 +18,5 @@ public class Global
     public final static Logger logger= LogManager.getLogger();
     public static DBHandler db;
     public static Status status;
-    //public static User user;
-
-    private Global()
-    {
-
-    }
+   
 }
